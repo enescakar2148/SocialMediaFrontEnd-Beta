@@ -3,6 +3,7 @@ import "./Feed.css"
 import {Grid } from '@material-ui/core'
 import StatusBar from '../StatusBar/StatusBar'
 import MainPage from '../MainPage/MainPage'
+import SuggestionBox from '../SuggestionBox/SuggestionBox'
 
 export default class Feed extends Component {
     render() {
@@ -16,7 +17,11 @@ export default class Feed extends Component {
                             <MainPage/>
                         </div>
                     </Grid>
-                    <Grid item xs={2}></Grid>
+                    <Grid item xs={2}>
+                        <div>
+                            <SuggestionBox/>
+                        </div>
+                    </Grid>
                     <Grid item xs={2}></Grid>
                 </Grid>
             </div>

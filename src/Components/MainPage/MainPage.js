@@ -14,22 +14,22 @@ export default class MainPage extends Component {
     getPosts = () => {
         let data = [
             {
-                username: "Atamert",
+                username: "Celal Şengör",
                 likes: 278,
                 comments: ["İlber Hoca: Vaay kardeşim fenasın yine"],
                 img: "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
             },
             {
-                username: "Mert",
+                username: "Celal Şengör",
                 likes: 278,
                 comments: ["İlber Hoca: Adam adam"],
-                img: "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
+                img: "https://mir-s3-cdn-cf.behance.net/projects/404/f47c23117147779.Y3JvcCwxNzQ1LDEzNjUsMTUxLDA.jpg"
             },
             {
-                username: "Berk",
+                username: "Celal Şengör",
                 likes: 278,
                 comments: ["İlber Hoca: Vaay kardeşim fenasın yine"],
-                img: "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
+                img: "https://i.sozcu.com.tr/wp-content/uploads//2018/03/iecrop/celal-sengor_16_9_1519982463.jpg"
             }
         ]
 
