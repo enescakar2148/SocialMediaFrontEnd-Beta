@@ -10,10 +10,10 @@ export default class Post extends Component {
             <div className="postCard">
                 <div className="postHeader">
                     <Avatar className="postAvatar"/>
-                    <div className="postAvatarUsername">{this.props.data.username}</div>
+                    <div className="postAvatarUsername">{this.props.data.userName}</div>
                 </div>
                 <div>
-                    <img width="615px" alt="Post" src={this.props.data.img}/>
+                    <img width="615px" alt="Post" src={this.props.data.photoUrl}/>
                 </div>
                 <div>
                     <div className="iconContainer">
@@ -26,11 +26,13 @@ export default class Post extends Component {
                     </div>
                 </div>
                 <div>
-                    {this.props.data.comments.map((obj)=>{
+                    {/*
+                    this.props.data.comments.map((obj)=>{
                         return (
                             <div className="comment" key={obj}>{obj}</div>
                         )
-                    })}
+                    })
+                */}
                     <input className="commentInput" type="text" placeholder="Add a comment"/>
                 </div>
             </div>
