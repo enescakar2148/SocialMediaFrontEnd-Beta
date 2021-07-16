@@ -25,6 +25,42 @@ export default class SuggestionBox extends Component {
             {
                 username: "Fatih Altaylı",
                 img: "https://odatv4.com/images/2020_06/2020_06_09/fatih-altayli-korkuyorum-09062034_l2.jpg"
+            },
+            {
+                username: "Celal Şengör",
+                img: "https://i2.milimaj.com/i/milliyet/75/0x0/5e8e2a735542800430dc7323.gif"
+            },
+            {
+                username: "İlber Ortaylı",
+                img: "https://www.businessworldglobal.com/wp-content/uploads/2019/08/ilber-ortayli-555x305.jpg"
+            },
+            {
+                username: "Fatih Altaylı",
+                img: "https://odatv4.com/images/2020_06/2020_06_09/fatih-altayli-korkuyorum-09062034_l2.jpg"
+            },
+            {
+                username: "Celal Şengör",
+                img: "https://i2.milimaj.com/i/milliyet/75/0x0/5e8e2a735542800430dc7323.gif"
+            },
+            {
+                username: "İlber Ortaylı",
+                img: "https://www.businessworldglobal.com/wp-content/uploads/2019/08/ilber-ortayli-555x305.jpg"
+            },
+            {
+                username: "Fatih Altaylı",
+                img: "https://odatv4.com/images/2020_06/2020_06_09/fatih-altayli-korkuyorum-09062034_l2.jpg"
+            },
+            {
+                username: "Celal Şengör",
+                img: "https://i2.milimaj.com/i/milliyet/75/0x0/5e8e2a735542800430dc7323.gif"
+            },
+            {
+                username: "İlber Ortaylı",
+                img: "https://www.businessworldglobal.com/wp-content/uploads/2019/08/ilber-ortayli-555x305.jpg"
+            },
+            {
+                username: "Fatih Altaylı",
+                img: "https://odatv4.com/images/2020_06/2020_06_09/fatih-altayli-korkuyorum-09062034_l2.jpg"
             }
         ]
 

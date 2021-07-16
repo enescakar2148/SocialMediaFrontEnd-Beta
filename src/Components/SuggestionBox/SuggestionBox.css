@@ -6,10 +6,10 @@ body {
     position: fixed;
     width: 16%;
     margin-top: 25px;
-    height: 450px;
     border: 1px solid #dbdbdb;
     background-color: white;
     overflow-y: scroll;
+    max-height: 300px;
 
 }
 
