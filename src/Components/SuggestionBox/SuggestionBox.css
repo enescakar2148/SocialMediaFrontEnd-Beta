@@ -3,8 +3,6 @@ body {
 }
 
 .suggestionCard {
-    position: fixed;
-    width: 16%;
     margin-top: 25px;
     border: 1px solid #dbdbdb;
     background-color: white;
@@ -12,6 +10,11 @@ body {
     max-height: 300px;
 
 }
+
+.suggestionCard::-webkit-scrollbar{
+    display: none;
+}
+
 
 .userCard {
     border-bottom: 1px solid #dbdbdb;
@@ -38,6 +41,3 @@ body {
     margin-top: 8px;
 }
 
-.statusBarCard::-webkit-scrollbar{
-    display: none;
-}

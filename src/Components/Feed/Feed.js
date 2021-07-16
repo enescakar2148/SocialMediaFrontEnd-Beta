@@ -4,6 +4,8 @@ import {Grid } from '@material-ui/core'
 import StatusBar from '../StatusBar/StatusBar'
 import MainPage from '../MainPage/MainPage'
 import SuggestionBox from '../SuggestionBox/SuggestionBox'
+import SharePost from '../SharePost/SharePost'
+import ShareStory from '../ShareStory/ShareStory'
 
 export default class Feed extends Component {
     render() {
@@ -20,6 +22,8 @@ export default class Feed extends Component {
                     <Grid item xs={2}>
                         <div>
                             <SuggestionBox/>
+                            <SharePost/>
+                            <ShareStory/>
                         </div>
                     </Grid>
                     <Grid item xs={2}></Grid>
