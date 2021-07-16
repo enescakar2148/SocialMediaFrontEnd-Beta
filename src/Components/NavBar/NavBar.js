@@ -6,7 +6,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 export default class NavBar extends Component {
     render() {
         return (
-            <div>
+            <div className="navWrapper">
                 <div className="navBarContent">
                     <Grid container>
                         <Grid item xs={2}>
