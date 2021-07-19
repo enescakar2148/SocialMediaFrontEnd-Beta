@@ -25,13 +25,14 @@ export default class SharePost extends Component {
             userName: "Celal Şengör",
             userId: uuidv4(),
             timestamp: null,
-            photoUrl: this.imgSource
+            photoUrl: this.imgSource,
+            postId: uuidv4()
         }
 
-        axios.post("localhost:8080/api/posts/new", bundle).then((response)=>  {
+        axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
             alert("Başarılı")
         }).catch((err)=> {
-            alert("Bir hata meydana geldi")
+            alert("Bir hata meydana geldi: "+ err)
         })
     }
 
