@@ -1,6 +1,20 @@
 import axios from 'axios';
 import React, { Component } from 'react'
 import "./SharePost.css"
+import firebase from "firebase";
+// Required for side-effects
+require("firebase/firestore");
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    apiKey: "AIzaSyAMrpDyNKZGKEUJ8Qv-KUvpzxcSxV4bQ8M",
+    authDomain: "qigatask.firebaseapp.com",
+    projectId: "qigatask",
+    storageBucket: "qigatask.appspot.com",
+  });
+} else {
+  firebase.app(); // if already initialized, use that one
+}
+var storage = firebase.storage();
 
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -21,19 +35,31 @@ export default class SharePost extends Component {
     }
 
     sharePost = () => {
-        let bundle = {
-            userName: "Celal Şengör",
-            userId: uuidv4(),
-            timestamp: null,
-            photoUrl: this.imgSource,
-            postId: uuidv4()
-        }
+        if(this.file){
+            let storageRef = storage.ref().child("posts").child(uuidv4())
 
-        axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
-            alert("Başarılı")
-        }).catch((err)=> {
-            alert("Bir hata meydana geldi: "+ err)
-        })
+            storageRef.put(this.file).then((snapshot)=> {
+                snapshot.ref.getDownloadURL().then((url)=>{
+                    let bundle = {
+                        userName: "Celal Şengör",
+                        userId: uuidv4(),
+                        timestamp: null,
+                        photoUrl: url,
+                        postId: uuidv4()
+                    }
+
+                    axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
+                        alert("Başarılı")
+                    }).catch((err)=> {
+                        alert("Bir hata meydana geldi: "+ err)
+                    })
+                })
+            })
+        }
+    }
+
+    photoInputHandler = (event) => {
+        this.file = event.target.files[0]
     }
 
     render() {
@@ -42,7 +68,7 @@ export default class SharePost extends Component {
                 <div className="sharePostCard">
                     <div className="sharePostText">Share Post</div>
                     <div className="sharePostInputs">
-                        <input type="file" placeholder="Photo" className="shareFileInput"/>
+                        <input type="file" placeholder="Photo" className="shareFileInput" onChange={this.photoInputHandler}/>
                         <input type="text" placeholder="Description" className="shareTextInput" onChange={this.descListener}/>
                     </div>
                     <div className="sharePostImgDiv">

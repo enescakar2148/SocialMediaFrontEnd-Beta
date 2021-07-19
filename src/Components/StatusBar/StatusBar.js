@@ -1,4 +1,5 @@
 import { Avatar } from '@material-ui/core'
+import axios from 'axios';
 import React, { Component } from 'react'
 import "./StatusBar.css"
 
@@ -11,24 +12,20 @@ export default class StatusBar extends Component {
         }
     }
 
-    getStoryData = () => {
-        let storyData =[
-            {
-                username: "atamert",
-                img: ""
-            },
-            {
-                username: "mert",
-                img:""
-            }
-        ]
-        return storyData
-    }
-
     componentDidMount = () => {
-        this.setState({
-            storyDatas : this.getStoryData()
+        let data;
+
+        axios
+        .get("http://localhost:8080/api/stories")
+        .then((resp) => {
+            data = resp.data;
+            this.setState({
+                storyDatas: data,
+            });
         })
+        .catch((err) => {
+            alert(err);
+        });
     }
 
     render() {
@@ -37,9 +34,9 @@ export default class StatusBar extends Component {
                 <div className="statusBarCard">
                     {
                         this.state.storyDatas.map((obj) => {
-                            return (<div className="statusDiv" key={obj.username}>
-                                        <Avatar className="statusAvatar"/>
-                                        <div className="usernameText" style={{textAlign:"center"}} >{obj.username}</div>
+                            return (<div className="statusDiv" key={obj.id}>
+                                        <Avatar className="statusAvatar" src={obj.storyImageURL}/>
+                                        <div className="usernameText" style={{textAlign:"center"}} >{obj.userName}</div>
                                     </div>)
                         })
                     }
