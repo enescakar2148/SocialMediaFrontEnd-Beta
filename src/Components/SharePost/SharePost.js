@@ -49,7 +49,8 @@ export default class SharePost extends Component {
                     }
 
                     axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
-                        alert("Başarılı")
+                        alert("Başarılı");
+                        window.location.reload();
                     }).catch((err)=> {
                         alert("Bir hata meydana geldi: "+ err)
                     })
