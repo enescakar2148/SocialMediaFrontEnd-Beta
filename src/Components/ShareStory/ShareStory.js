@@ -44,7 +44,8 @@ export default class ShareStory extends Component {
                     }
 
                     axios.post("http://localhost:8080/api/stories/new", bundle).then((response)=> {
-                        alert("Başarılı")
+                        alert("Başarılı");
+                        window.location.reload();
                     }).catch((err)=>{
                         alert("Bir hata meydana geldi: "+err)
                     })
