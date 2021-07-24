@@ -1,3 +1,6 @@
+/* İmport colours */
+@import url("./colours.css");
+
 /* Nav Wrapper */
 .nav-wrapper{
     height: 80px;
@@ -11,7 +14,7 @@
     max-width: 275px;
     height: 100%;
     width: 100%;
-    background-color: rgb(201, 191, 191);
+    background-color: var(--bg);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,7 +24,7 @@
 .nav-icons{
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: var(--bg);
 }
 
 /* Search box */
@@ -31,6 +34,7 @@
     border: 1px solid transparent;
     border-radius: 10px;
     font-size: .83rem;
+    background-color: var(--light-blue);
 }
 #search-box:focus{
    outline: none;
