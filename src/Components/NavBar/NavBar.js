@@ -1,4 +1,4 @@
-import { Avatar, Grid } from "@material-ui/core";
+// import { Avatar, Grid } from "@material-ui/core";
 import React, { Component } from "react";
 import "@fortawesome/fontawesome-free/js/all.js";
 import uploadBtn from "../../images/upload.png";

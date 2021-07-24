@@ -24,3 +24,8 @@ a{
     background-color: var(--bg-icons);
     border-radius: 5px;
 }
+
+/* Feed Content Sections */
+.feed-content{
+    padding: 2rem;
+}
