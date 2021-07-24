@@ -47,7 +47,7 @@ export default class ShareStory extends Component {
                         alert("Başarılı");
                         window.location.reload();
                     }).catch((err)=>{
-                        alert("Bir hata meydana geldi: "+err)
+                        // alert("Bir hata meydana geldi: "+err)
                     })
                 })
             })

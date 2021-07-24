@@ -1,10 +1,58 @@
-.navBarContent {
+/* Nav Wrapper */
+.nav-wrapper{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Seacrh bar */
+.search-bar{
+    max-width: 275px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(201, 191, 191);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Nav İcons */
+.nav-icons{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+/* Search box */
+#search-box{
+    padding: .5rem;
+    width: 75%;
+    border: 1px solid rgb(45, 162, 170);
+    border-radius: 10px;
+    font-size: .83rem;
+}
+#search-box:focus{
+   outline: none;
+   border: 2px solid rgb(7, 129, 138);
+}
+
+/* Upload Btn */
+#btn-upload{
+    height: 30px;
+    cursor: pointer;
+}
+
+/* KAAN'IN YAZDIĞI  */
+/* BENİMKİ BİTENE KADAR DURSUN */
+
+/* .navBarContent {
     height: 54px;
     background-color: white;
     border-bottom: 1px solid #dbdbdb;
-    /* position: fixed;
+    position: fixed;
     width: 100%;
-    z-index: 999; */
+    z-index: 999; 
 }
 
 .appName {
@@ -36,4 +84,4 @@
     height: 32px;
     width: 245px;
     border: 1px solid #bdbdbd;
-}
+} */

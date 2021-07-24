@@ -23,16 +23,16 @@ export default class MainPage extends Component {
         });
       })
       .catch((err) => {
-        alert(err);
+        // alert(err);
       });
   };
 
   render() {
     return (
       <div>
-        {this.state.postDatas.map((data) => {
+        {/* {this.state.postDatas.map((data) => {
           return <Post data={data} key={data.id} />;
-        })}
+        })} */}
       </div>
     );
   }

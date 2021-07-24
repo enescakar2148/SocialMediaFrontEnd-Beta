@@ -24,7 +24,7 @@ export default class StatusBar extends Component {
             });
         })
         .catch((err) => {
-            alert(err);
+            // alert(err);
         });
     }
 

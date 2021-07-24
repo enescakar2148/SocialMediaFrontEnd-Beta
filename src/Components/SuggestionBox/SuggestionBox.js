@@ -97,9 +97,9 @@ export default class SuggestionBox extends Component {
                     </div>
                     <div className="sugText">Suggestions For You</div>
                     <div className="suggestionsCard">
-                        {this.state.suggestionDatas.map((obj) => {
+                        {/* {this.state.suggestionDatas.map((obj) => {
                             return (<SuggestionComp data={obj} key={obj.id}/>)
-                        })}
+                        })} */}
                     </div>
                 </div>
             </div>
