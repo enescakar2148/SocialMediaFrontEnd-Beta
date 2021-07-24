@@ -28,13 +28,13 @@
 #search-box{
     padding: .5rem;
     width: 75%;
-    border: 1px solid rgb(45, 162, 170);
+    border: 1px solid transparent;
     border-radius: 10px;
     font-size: .83rem;
 }
 #search-box:focus{
    outline: none;
-   border: 2px solid rgb(7, 129, 138);
+   border: 1px solid rgb(7, 129, 138);
 }
 
 /* Upload Btn */
