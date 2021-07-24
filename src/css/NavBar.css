@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 75%;
 }
 
 /* Seacrh bar */
@@ -25,6 +26,9 @@
     height: 100%;
     width: 100%;
     background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Search box */
@@ -34,11 +38,10 @@
     border: 1px solid transparent;
     border-radius: 10px;
     font-size: .83rem;
-    background-color: var(--light-blue);
 }
 #search-box:focus{
    outline: none;
-   border: 1px solid rgb(7, 129, 138);
+   border: 1px solid var(--light-blue);
 }
 
 /* Upload Btn */
