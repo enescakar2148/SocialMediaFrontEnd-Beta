@@ -1,6 +1,6 @@
 import { Avatar } from '@material-ui/core'
 import React, { Component } from 'react'
-import "./Post.css"
+import "../../css/Post.css";
 
 
 export default class Post extends Component {

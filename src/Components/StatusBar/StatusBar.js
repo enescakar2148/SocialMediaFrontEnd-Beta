@@ -1,7 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import axios from 'axios';
 import React, { Component } from 'react'
-import "./StatusBar.css"
+import "../../css/StatusBar.css";
 
 export default class StatusBar extends Component {
 

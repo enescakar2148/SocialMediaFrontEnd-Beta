@@ -1,8 +1,8 @@
 import { Avatar, Grid } from '@material-ui/core'
 import React, { Component } from 'react'
-import "./NavBar.css"
 import '@fortawesome/fontawesome-free/js/all.js';
 import uploadBtn from '../../images/upload.png';
+import "../../css/NavBar.css";
 
 export default class NavBar extends Component {
     render() {

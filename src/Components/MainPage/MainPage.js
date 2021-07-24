@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./MainPage.css";
 import Post from "../Post/Post";
 import axios from "axios";
+import "../../css/MainPage.css";
 
 export default class MainPage extends Component {
   constructor(props) {

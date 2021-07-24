@@ -1,7 +1,7 @@
 import { Avatar } from '@material-ui/core'
 import React, { Component } from 'react'
-import "./SuggestionBox.css"
 import SuggestionComp from '../SuggestionComp/SuggestionComp'
+import "../../css/SuggestionBox.css";
 
 export default class SuggestionBox extends Component {
 

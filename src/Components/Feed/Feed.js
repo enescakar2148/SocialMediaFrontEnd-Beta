@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import "./Feed.css"
-import {Grid } from '@material-ui/core'
-import StatusBar from '../StatusBar/StatusBar'
-import MainPage from '../MainPage/MainPage'
-import SuggestionBox from '../SuggestionBox/SuggestionBox'
-import SharePost from '../SharePost/SharePost'
-import ShareStory from '../ShareStory/ShareStory'
+import React, { Component } from 'react';
+import {Grid } from '@material-ui/core';
+import StatusBar from '../StatusBar/StatusBar';
+import MainPage from '../MainPage/MainPage';
+import SuggestionBox from '../SuggestionBox/SuggestionBox';
+import SharePost from '../SharePost/SharePost';
+import ShareStory from '../ShareStory/ShareStory';
+import "../../css/Feed.css";
 
 export default class Feed extends Component {
     render() {

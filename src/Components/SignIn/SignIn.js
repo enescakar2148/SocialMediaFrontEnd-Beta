@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import "../LoginPage.css"
 
 export default class SignIn extends Component {
     render() {

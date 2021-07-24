@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import "./ShareStory.css"
 import axios from 'axios';
 import firebase from "firebase";
+import "../../css/ShareStory.css";
+
 // Required for side-effects
 require("firebase/firestore");
 if (!firebase.apps.length) {

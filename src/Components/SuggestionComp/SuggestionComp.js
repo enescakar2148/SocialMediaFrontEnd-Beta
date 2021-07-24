@@ -1,6 +1,6 @@
 import { Avatar, Grid } from '@material-ui/core'
 import React, { Component } from 'react'
-import "./SuggestionComp.css"
+import "../../css/SuggestionComp.css";
 
 
 

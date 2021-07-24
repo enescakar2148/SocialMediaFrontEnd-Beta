@@ -2,7 +2,7 @@ import { Grid } from '@material-ui/core';
 import React, { Component } from 'react'
 import SignIn from './SignIn/SignIn';
 import SignUp from './SingUp/SignUp';
-import "./LoginPage.css"
+import "../css/LoginPage.css";
 
 export default class LoginPage extends Component {
     constructor(props){
