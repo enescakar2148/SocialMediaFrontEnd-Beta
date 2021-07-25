@@ -2,17 +2,9 @@
 import React, { Component } from "react";
 import "@fortawesome/fontawesome-free/js/all.js";
 import uploadBtn from "../../images/upload.png";
-import "../../css/NavBar.css";
-import "../../css/global.css";
-import "../../css/global.css";
 
-// İcons
-import home from "../../images/home.png";
-import team from "../../images/team.png";
-import messages from "../../images/messages.png";
-import savedPost from "../../images/saved_post.png";
-import check from "../../images/check.png";
-import settings from "../../images/settings.png";
+import "../../css/global.css";
+import "../../css/NavBar.css";
 
 export default class NavBar extends Component {
   render() {
@@ -29,19 +21,19 @@ export default class NavBar extends Component {
           <nav>
             <ul id="nav-list">
               <li class="nav-item">
-              <a href="#"><img src={home} id="home-icon" class="icon active"/></a>
+              <a href="#" class="icon active"><i class="fas fa-home" id="home-icon"></i></a>
               </li>
               <li class="nav-item">
-              <a href="#"><img src={team} id="team-icon" class="icon active"/></a>
+              <a href="#" class="icon"><i class="fas fa-users" id="team-icon"></i></a>
               </li>
               <li class="nav-item">
-              <a href="#"><img src={messages} id="messages-icon" class="icon active"/></a>
+              <a href="#" class="icon"><i class="far fa-comments" id="messages-icon"></i></a>
               </li>
               <li class="nav-item">
-              <a href="#"><img src={savedPost} id="saved-post-icon" class="icon active"/></a>
+              <a href="#" class="icon"><i class="far fa-bookmark" id="saved-post-icon"></i></a>
               </li>
               <li class="nav-item">
-                <a href="#"><img src={settings} id="settings-icon" class="icon active"/></a>
+                <a href="#" class="icon"><i class="fas fa-cog" id="settings-icon"></i></a>
               </li>
             </ul>
           </nav>
