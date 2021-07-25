@@ -1,11 +1,12 @@
 @import url("./colours.css");
 
 .stories-wrapper{
-    height: 80px;
+    height: 110px;
     width: 100%;
     background-color: var(--white);
     padding-left: 300px;
     padding-right: 350px;
+    padding-top: 1.5rem;
     display: flex;
     align-items: center;
 

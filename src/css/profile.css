@@ -1,0 +1,42 @@
+@import url("./colours.css");
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#account {
+  color: var(--light-blue);
+  text-align: center;
+}
+
+.pp-section {
+  display: flex;
+  justify-content: center;
+}
+#pp {
+  height: 125px;
+  margin-top: 1rem;
+}
+#user-name {
+  text-align: center;
+  color: var(--light-blue);
+}
+
+.profile-details-wrapper {
+  border-bottom: 1px solid #000;
+  width: 100%;
+}
+/* Notification */
+.explore {
+  margin-top: 0.75rem;
+}
+.notification {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin-left: 0.4rem;
+}

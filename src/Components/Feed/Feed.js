@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import "../../css/Feed.css";
 import "../../css/global.css";
 import Posts from '../FeedSubComponents/Posts';
+import Profile from '../FeedSubComponents/Profile';
 import Stories from '../FeedSubComponents/Stories';
 
 export default class Feed extends Component {
@@ -22,6 +23,7 @@ export default class Feed extends Component {
                     <Posts/>
                 </div>
                 <div class="profile-section feed-content">
+                    <Profile/>
                 </div>
                 {/* <Grid container>
                     <Grid item xs={2}></Grid>

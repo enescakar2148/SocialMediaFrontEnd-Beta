@@ -10,46 +10,47 @@ export default function Stories() {
             <ul id="story-container">
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">You</p>
+                    <p class="story-user-name">Sen</p>
                 </li>
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Ahmet Köse</p>
                 </li>
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Selman Veli</p>
                 </li>
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Ahmet Köse</p>
                 </li>
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Selman Veli</p>
                 </li>
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Ahmet Köse</p>
                 </li>
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Selman Veli</p>
                 </li>
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Ahmet Köse</p>
                 </li>
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Selman Veli</p>
                 </li>
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Ahmet Köse</p>
                 </li>
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
+                    <p class="story-user-name">Selman Veli</p>
                 </li>
             </ul>
         </div>
