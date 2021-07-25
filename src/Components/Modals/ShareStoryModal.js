@@ -61,7 +61,7 @@ export default class ShareStoryModal extends Component {
             <ReactCircleModal
               backgroundColor="#2fb3e1"
               toogleComponent={onClick => (
-                <img src={pp1} class="story-image" alt="Stories from All Followed" onClick={onClick}/>
+                <img src={pp1} className="story-image" alt="Stories from All Followed" onClick={onClick}/>
               )}
               // Optional fields and their default values
               offsetX={0}
