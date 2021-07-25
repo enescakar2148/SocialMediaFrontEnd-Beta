@@ -1,0 +1,96 @@
+/* İmport colours */
+@import url("./colours.css");
+
+/* Nav Wrapper */
+.nav-wrapper{
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 77.25%;
+    position: fixed;
+    z-index: 1;
+}
+
+/* Seacrh bar */
+.search-bar{
+    max-width: 275px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Nav İcons */
+.nav-icons{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search box */
+#search-box{
+    padding: .5rem;
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: .83rem;
+}
+#search-box:focus{
+   outline: none;
+   border: 1px solid var(--light-blue);
+}
+
+/* Upload Btn */
+#btn-upload{
+    height: 30px;
+    cursor: pointer;
+}
+
+/* KAAN'IN YAZDIĞI  */
+/* BENİMKİ BİTENE KADAR DURSUN */
+
+/* .navBarContent {
+    height: 54px;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    width: 100%;
+    z-index: 999; 
+}
+
+.appName {
+    text-align: left;
+    font-size: 23px;
+}
+
+.navIcon {
+    margin: 15px 10px;
+    max-height: 25px;
+    max-width: 25px;
+}
+
+.searchInput {
+    background-color: #fafafa;
+    height: 30px;
+    width: 215px;
+    border: none;
+    padding-left: 3px;
+    outline: none;
+}
+
+.searchDiv {
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin-top: 10px;
+    text-align: center;
+    height: 32px;
+    width: 245px;
+    border: 1px solid #bdbdbd;
+} */

@@ -1,0 +1,31 @@
+@import url("./colours.css");
+
+.icon{
+    height: 30px;
+    padding: .25rem;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+/* nav list */
+#nav-list{
+    list-style-type: none;
+    display: flex;
+}
+
+/* nav item */
+.nav-item{
+    margin: 0 1rem;
+}
+
+/* Select icon */
+.active{
+    background-color: var(--bg-icons);
+    border-radius: 5px;
+}
+
+/* Feed Content Sections */
+.feed-content{
+    padding: 2rem;
+}

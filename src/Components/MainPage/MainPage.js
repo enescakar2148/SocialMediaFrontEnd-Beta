@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./MainPage.css";
-import Post from "../Post/Post";
+// import Post from "../Post/Post";
 import axios from "axios";
+import "../../css/MainPage.css";
 
 export default class MainPage extends Component {
   constructor(props) {
@@ -32,16 +32,16 @@ export default class MainPage extends Component {
         });
       })
       .catch((err) => {
-        alert(err);
+        // alert(err);
       });
   };
 
   render() {
     return (
       <div>
-        {this.state.postDatas.map((data) => {
+        {/* {this.state.postDatas.map((data) => {
           return <Post data={data} key={data.id} />;
-        })}
+        })} */}
       </div>
     );
   }

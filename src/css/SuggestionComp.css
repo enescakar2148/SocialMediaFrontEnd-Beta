@@ -1,0 +1,25 @@
+.SuggestionCompCard {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.SuggestionCompCardAvatar {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 10px;
+}
+
+.SuggestionCompCardText {
+    margin-top: 7px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.SuggestionCompCardFollowText {
+    font-size: 12px;
+    text-align: right;
+    margin-top: 17px;
+    margin-right: 5px;
+    color: teal;
+}

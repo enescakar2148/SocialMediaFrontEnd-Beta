@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { Component } from 'react'
-import "./SharePost.css"
 import firebase from "firebase";
+import "../../css/SharePost.css";
+
 // Required for side-effects
 require("firebase/firestore");
+
+
 if (!firebase.apps.length) {
   firebase.initializeApp({
     apiKey: "AIzaSyAMrpDyNKZGKEUJ8Qv-KUvpzxcSxV4bQ8M",
@@ -52,7 +55,7 @@ export default class SharePost extends Component {
                         alert("Başarılı");
                         window.location.reload();
                     }).catch((err)=> {
-                        alert("Bir hata meydana geldi: "+ err)
+                        // alert("Bir hata meydana geldi: "+ err)
                     })
                 })
             })

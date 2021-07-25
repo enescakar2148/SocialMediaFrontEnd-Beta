@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import "./SignIn.css"
 import { Avatar } from '@material-ui/core'
+=======
+>>>>>>> 6a034386da66d870c3032f11b896013a06ab708e
 
 export default class SignIn extends Component {
     render() {

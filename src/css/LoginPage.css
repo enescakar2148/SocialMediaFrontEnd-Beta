@@ -1,0 +1,86 @@
+body {
+    background-color: #fafafa;
+}
+
+.loginCard {
+    padding-bottom: 25px;
+    border: 1px solid #dbdbdb;
+    margin-top: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.cardInCard {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.signInDiv {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.loginInput {
+    width: 250px;
+    height: 36px;
+    margin-top: 5px;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.loginButton {
+    width: 265px;
+    height: 36px;
+    font-weight: bold;
+    border: 1px solid #0395f6;
+    background-color: #0395f6;
+    color: white;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.loginOrDiv  {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    width: 105px;
+    border: 1px solid #dbdbdb;
+    height: 0px;
+    margin-top: 10px;
+}
+
+.loginOr {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #bebebe;
+}
+
+.forgotPassword {
+    color: rgba(var(--fe0, 0, 55, 107),1);
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.signUpOption {
+    text-align: center;
+    margin-top: 25px;
+    height: 60px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+
+}
+
+.signUpText {
+    margin-top: 22px;
+}
+
+.signInText {
+    margin-top: 22px;
+}
