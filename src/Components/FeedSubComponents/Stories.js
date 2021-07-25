@@ -51,12 +51,8 @@ export default class Stories extends Component {
 
                 
                 {this.state.storyDatas.map((data)=> {
-                    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     return(
-                        <li class="story">
+                        <li key={data.postId} class="story">
                             <img src={data.storyImageURL} datas={data} class="story-image" alt="Stories from All Followed"/>
                             <p class="story-user-name">{data.userName}</p>
                         </li>
