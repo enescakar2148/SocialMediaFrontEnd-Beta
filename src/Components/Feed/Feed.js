@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-// import {Grid } from '@material-ui/core';
-// import StatusBar from '../StatusBar/StatusBar';
-// import MainPage from '../MainPage/MainPage';
-// import SuggestionBox from '../SuggestionBox/SuggestionBox';
-// import SharePost from '../SharePost/SharePost';
-// import ShareStory from '../ShareStory/ShareStory';
 import "../../css/Feed.css";
 import "../../css/global.css";
+import LeftSection from '../FeedSubComponents/LeftSection';
 import Posts from '../FeedSubComponents/Posts';
 import Profile from '../FeedSubComponents/Profile';
 import Stories from '../FeedSubComponents/Stories';
@@ -16,7 +11,7 @@ export default class Feed extends Component {
         return (
             <div class="feed-wrapper">
                 <div class="left-section feed-content">
-                    <h1>left</h1>
+                    <LeftSection/>
                 </div>
                 <div class="feed feed-content">
                     <Stories/>
