@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
 import "./SignIn.css"
 import { Avatar } from '@material-ui/core'
-=======
->>>>>>> 6a034386da66d870c3032f11b896013a06ab708e
 
 export default class SignIn extends Component {
     render() {
@@ -11,7 +8,7 @@ export default class SignIn extends Component {
             <div>
                 <div className="signInWrapper">
                     <div className="companyAvatar">
-                        <Avatar  style={{display:'inline-flex'}}/>
+                        <Avatar  style={{display:'inline-flex', minWidth:"80px", minHeight:"80px" }}/>
                         <div className="companyNametext">Company Name</div>
                     </div>
                     <div className="signOptions">

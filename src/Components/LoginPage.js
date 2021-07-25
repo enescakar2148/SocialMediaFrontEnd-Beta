@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import SignIn from './SignIn/SignIn';
 import SignUp from './SingUp/SignUp';
 import "../css/LoginPage.css";
+import loginPhoto from '../images/loginPhoto.png'
 
 export default class LoginPage extends Component {
     constructor(props){
@@ -31,7 +32,9 @@ export default class LoginPage extends Component {
                         </div>
                             
                     </Grid>
-                    <Grid item xs={6}></Grid>
+                    <Grid item xs={6}>
+                        <img src={loginPhoto} alt="" width="100%" height="100%"/>
+                    </Grid>
                 </Grid>
             </div>
         )
