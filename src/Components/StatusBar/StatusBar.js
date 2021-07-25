@@ -8,7 +8,16 @@ export default class StatusBar extends Component {
     constructor(props){
         super(props);
         this.state = {
-            storyDatas : []
+            storyDatas : [
+                {
+                    id: 999,
+                    userName: "Celal Şengör",
+                    userId: "89123721987213",
+                    storyImageURL: "https://i.sozcu.com.tr/wp-content/uploads//2018/03/iecrop/celal-sengor_16_9_1519982463.jpg",
+                    timestamp: null,
+                    postId: "138218921721897218932"
+                }
+            ]
         }
     }
 
