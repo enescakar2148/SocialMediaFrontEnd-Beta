@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
 /* User İnfo */
@@ -25,6 +26,7 @@
 .status{
     margin-left: .5rem;
     color: var(--bg-icons);
+    font-weight: bold;
 }
 
 #pp-post{
@@ -39,4 +41,33 @@
 #post-image{
     max-width: 650px;
     width: 100%;
+}
+
+/* Options */
+.options-wrapper {
+    max-width: 650px;
+    width: 100%;
+    background-color: var(--bg);
+    border-radius: 25px;
+    padding: .5rem;
+}
+
+/* İcons */
+.action-icons{
+    display: flex;
+    list-style-type: none;
+}
+.action-icon{
+    margin: 0 .5rem;
+    font-size: 1.25rem;
+}
+
+
+#option-user-name{
+    margin-left: 0;
+    min-width: 100px;
+}
+
+.texts{
+    display: flex;
 }
