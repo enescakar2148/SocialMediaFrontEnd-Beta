@@ -7,6 +7,8 @@ import React, { Component } from 'react';
 // import ShareStory from '../ShareStory/ShareStory';
 import "../../css/Feed.css";
 import "../../css/global.css";
+import Posts from '../FeedSubComponents/Posts';
+import Stories from '../FeedSubComponents/Stories';
 
 export default class Feed extends Component {
     render() {
@@ -16,10 +18,10 @@ export default class Feed extends Component {
                     <h1>left</h1>
                 </div>
                 <div class="feed feed-content">
-                    <h1>feed</h1>
+                    <Stories/>
+                    <Posts/>
                 </div>
                 <div class="profile-section feed-content">
-                    <h1>profile</h1>
                 </div>
                 {/* <Grid container>
                     <Grid item xs={2}></Grid>
