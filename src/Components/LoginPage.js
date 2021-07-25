@@ -14,29 +14,58 @@ export default class LoginPage extends Component {
     }
     // loginStateChanger state kısımında tanımladığım logInState değerini değiştiriyor
     // bu sayede sign in ve sign up componentleri arasında geçiş sağlıyorum state üzerinden
-    logInStateChanger = () => {
-        this.state.logInState === 0 ? this.setState({logInState:1}) : this.setState({logInState:0})
+
+    logInStateToOneChanger = () => {
+        this.setState({logInState:1})
+    }
+
+    logInStateToZeroChanger = () => {
+        this.setState({logInState:0})
     }
 
     render() {
-        return (
-            <div>
-                {// Material ui kütüphanesinin grid sistemi
-                // ekranı 12 birim düşünürsek 3-6-3 şeklinde gridlere ayırıyorum
-                // ortadaki 6 birimlik gridde sign in ve sign up componentlerini render ediyorum
-                }
-                <Grid container>
-                    <Grid item xs={6}>
-                        <div>
-                            <SignIn/>
-                        </div>
-                            
+        if(this.state.logInState===0){
+            return (
+                <div>
+                    {// Material ui kütüphanesinin grid sistemi
+                    // ekranı 12 birim düşünürsek 3-6-3 şeklinde gridlere ayırıyorum
+                    // ortadaki 6 birimlik gridde sign in ve sign up componentlerini render ediyorum
+                    }
+                    <Grid container>
+                        <Grid item xs={6}>
+                            <div>
+                                <SignIn changerOne={this.logInStateToOneChanger} changerZero={this.logInStateToZeroChanger}/>
+                            </div>
+                                
+                        </Grid>
+                        <Grid item xs={6}>
+                            <img src={loginPhoto} alt="" width="100%" height="100%"/>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={6}>
-                        <img src={loginPhoto} alt="" width="100%" height="100%"/>
+                </div>
+            )
+        }
+        if(this.state.logInState===1){
+            return (
+                <div>
+                    {// Material ui kütüphanesinin grid sistemi
+                    // ekranı 12 birim düşünürsek 3-6-3 şeklinde gridlere ayırıyorum
+                    // ortadaki 6 birimlik gridde sign in ve sign up componentlerini render ediyorum
+                    }
+                    <Grid container>
+                        <Grid item xs={6}>
+                            <div>
+                                <SignUp changerOne={this.logInStateToOneChanger} changerZero={this.logInStateToZeroChanger}/>
+                            </div>
+                                
+                        </Grid>
+                        <Grid item xs={6}>
+                            <img src={loginPhoto} alt="" width="100%" height="100%"/>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </div>
-        )
+                </div>
+            )
+        }
+    
     }
 }

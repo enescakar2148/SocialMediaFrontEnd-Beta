@@ -12,8 +12,8 @@ export default class SignIn extends Component {
                         <div className="companyNametext">Company Name</div>
                     </div>
                     <div className="signOptions">
-                        <div>SIGN IN</div>
-                        <div>SIGN UP</div>
+                        <button onClick={this.props.changerZero} >SIGN IN</button>
+                        <button onClick={this.props.changerOne} >SIGN UP</button>
                     </div>
                     <div className="inputSection">
                         <div className="emailInputDiv">
