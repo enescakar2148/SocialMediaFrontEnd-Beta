@@ -7,7 +7,16 @@ export default class MainPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      postDatas: [],
+      postDatas: [
+        {
+          id:99,
+          userName: "Celal Şengör",
+          uderId: "128937218973129",
+          timestamp: null,
+          photoUrl: "https://i.sozcu.com.tr/wp-content/uploads//2018/03/iecrop/celal-sengor_16_9_1519982463.jpg",
+          storyId: "219829831278912"
+        }
+      ],
     };
   }
 
