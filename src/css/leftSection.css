@@ -1,0 +1,73 @@
+@import url("./colours.css");
+
+.left-wrapper{
+    /* margin-top: ; */
+}
+
+#teams-title{
+    color: var(--light-blue);
+}
+
+.teams-content{
+    margin-top: .5rem;
+}
+.team{
+    height: 50px;
+    width: 50px;
+    background-color: var(--bg);
+    border: 3px solid var(--bg-icons);
+    border-radius: 100%;
+    margin: 2rem 0;
+}
+
+#friends-title{
+    color: var(--light-blue);
+    margin: 1rem 0;
+}
+
+.friends-content{
+    margin-top: .5rem;
+}
+.friend{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.friend-pp{
+    height: 50px;
+    background-color: var(--bg);
+    border: 3px solid var(--bg-icons);
+    border-radius: 100%;
+}
+
+.friend-user-name{
+    color: var(--light-blue);
+    margin-left: .5rem;
+}
+
+#suggestion-title{
+    color: var(--light-blue);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.suggestion-content{
+    margin-top: .5rem;
+}
+.suggestion{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-pp{
+    height: 50px;
+    background-color: var(--bg);
+    border: 3px solid var(--bg-icons);
+    border-radius: 100%;
+}
+.suggestion-user-name{
+    color: var(--light-blue);
+    margin-left: .5rem;
+}
