@@ -16,6 +16,10 @@ export default function Profile() {
         <div class="user-datas-section">
           <h1 id="user-name">Emre Akın</h1>
         </div>
+        <div class="datas">
+          <p class="data">450 Followers</p>
+          <p class="data">250 Follow</p>
+        </div>
       </div>
 
       <div class="explore">

@@ -1,7 +1,9 @@
 @import url("./colours.css");
 
 .stories-wrapper{
-    height: 110px;
+    min-height: 125px;
+    max-height: 150px;
+    height: 100%;
     width: 100%;
     background-color: var(--white);
     padding-left: 300px;
