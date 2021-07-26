@@ -35,7 +35,7 @@ export default class SignUp extends Component {
 
     passwordInputListener = (event) => {
         this.password = event.target.value
-        window.location = "http://www.google.com"
+        window.location = "/home"
     }
 
     profilePhotoHandler = (event) => {

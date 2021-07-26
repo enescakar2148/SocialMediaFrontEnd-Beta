@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import "../../css/SignIn.css";
 
 export default class SignIn extends Component {
+
+  logInButtonFunc = () => {
+    window.location = "/home"
+  }
+
   render() {
     return (
       <div className="sign-in-wrapper">
@@ -54,7 +59,7 @@ export default class SignIn extends Component {
         <div className="more-options">
             <p id="forgot-pass-text">Forgot Password?</p>
         </div>
-        <button id="go-feed-login">LOG IN</button>
+        <button id="go-feed-login" onClick={this.logInButtonFunc}>LOG IN</button>
         <div className="hr">
             {/* <p id="content-hr">lorem</p> */}
         </div>

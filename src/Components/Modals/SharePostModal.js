@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactCircleModal from 'react-circle-modal'
 import uploadBtn from "../../images/upload.png";
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
 import firebase from "firebase";
 
 // Required for side-effects
@@ -33,7 +34,8 @@ export default class SharePostModal extends Component {
     constructor(props){
         super(props)
         this.state = {
-            selectedImg: ""
+            selectedImg: "",
+            loading:0
         }
     }
 
@@ -43,6 +45,10 @@ export default class SharePostModal extends Component {
 
     sharePost = () => {
         if(this.file){
+            this.setState({
+              loading: 1
+            })
+
             let storageRef = storage.ref().child("posts").child(uuidv4())
 
             storageRef.put(this.file).then((snapshot)=> {
@@ -61,7 +67,11 @@ export default class SharePostModal extends Component {
 
                     axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
                         alert("Başarılı");
+                        this.setState({
+                          loading: 0
+                        })
                         window.location.reload();
+                        
                     }).catch((err)=> {
                         // alert("Bir hata meydana geldi: "+ err)
                     })
@@ -75,6 +85,12 @@ export default class SharePostModal extends Component {
     }
 
     render() {
+      let button
+      if(this.state.loading===0){
+        button = <button className="sharePostShareButton" onClick={this.sharePost} >Share</button>
+      }else{
+        button = <Loader type="Grid" color="#2fb3e1" width="40px" height="40px"/>
+      }
         return (
             <ReactCircleModal
               backgroundColor="#2fb3e1"
@@ -99,7 +115,9 @@ export default class SharePostModal extends Component {
                             <img src={this.state.selectedImg} className="sharePostImg" width="150px" height="150px" alt=""/>
                         </div>
                         <div style={{textAlign:'center'}}>
-                            <button className="sharePostShareButton" onClick={this.sharePost} >Share</button>
+                          {button}
+                            {/*<button className="sharePostShareButton" onClick={this.sharePost} >Share</button>
+                            <Loader type="Grid" color="#2fb3e1" width="40px" height="40px"/>*/}
                         </div>
                     </div>
                   </div>

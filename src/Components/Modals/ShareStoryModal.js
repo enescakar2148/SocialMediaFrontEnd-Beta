@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactCircleModal from 'react-circle-modal'
 import pp1 from "../../images/pp_1.png";
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
 import firebase from "firebase";
 
 // Required for side-effects
@@ -28,12 +29,23 @@ function uuidv4() {
 
 export default class ShareStoryModal extends Component {
 
+    constructor(props){
+      super(props)
+      this.state = {
+        loading: 0
+      }
+    }
+
     photoInputHandler = (event) => {
         this.file = event.target.files[0]
     }
 
     shareStoryButton = () => {
         if(this.file){
+            this.setState({
+              loading:1
+            })
+
             let storageRef = storage.ref().child("stories").child(uuidv4())
 
             storageRef.put(this.file).then((snapshot) => {
@@ -46,6 +58,9 @@ export default class ShareStoryModal extends Component {
                     }
 
                     axios.post("http://localhost:8080/api/stories/new", bundle).then((response)=> {
+                      this.setState({
+                        loading:0
+                      })
                         alert("Başarılı");
                         window.location.reload();
                     }).catch((err)=>{
@@ -57,6 +72,12 @@ export default class ShareStoryModal extends Component {
     }
 
     render() {
+        let button
+        if(this.state.loading===0){
+          button = <button className="sharePostShareButton" onClick={this.shareStoryButton} >Share</button>
+        }else{
+          button = <Loader type="Grid" color="#2fb3e1" width="40px" height="40px"/>
+        }
         return (
             <ReactCircleModal
               backgroundColor="#2fb3e1"
@@ -79,7 +100,7 @@ export default class ShareStoryModal extends Component {
                                 <img className="sharePostImg" width="150px" height="150px" alt=""/>
                             </div>
                             <div style={{textAlign:'center'}}>
-                                <button className="sharePostShareButton" onClick={this.shareStoryButton} >Share</button>
+                                {button}
                             </div>
                         </div>
                     </div>

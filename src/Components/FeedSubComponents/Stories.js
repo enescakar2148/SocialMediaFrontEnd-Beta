@@ -5,6 +5,7 @@ import "../../css/global.css";
 import pp1 from "../../images/pp_1.png";
 import pp2 from "../../images/pp_2.png";
 import ShareStoryModal from '../Modals/ShareStoryModal';
+import ShowStoryModal from '../Modals/ShowStoryModal';
 
 export default class Stories extends Component {
 
@@ -13,12 +14,28 @@ export default class Stories extends Component {
         this.state = {
             storyDatas : [
                 {
-                    id: 999,
+                    id: 1001,
                     userName: "Celal Şengör",
                     userId: "89123721987213",
                     storyImageURL: "https://i.sozcu.com.tr/wp-content/uploads//2018/03/iecrop/celal-sengor_16_9_1519982463.jpg",
                     timestamp: null,
                     postId: "138218921721897218932"
+                },
+                {
+                    id: 1002,
+                    userName: "Celal Şengör",
+                    userId: "891237219872133",
+                    storyImageURL: "https://foto.sondakika.com/haber/2020/08/11/eduard-suess-madalyasi-prof-dr-celal-sengor-e-13496875_osd.jpg",
+                    timestamp: null,
+                    postId: "1382189217218972189325"
+                },
+                {
+                    id: 1003,
+                    userName: "Celal Şengör",
+                    userId: "891237219872132",
+                    storyImageURL: "https://cdntr1.img.sputniknews.com/img/103892/13/1038921346_0:0:1200:675_1200x675_80_0_0_2635ff037d0dc4d3b10e1769e83e74d2.jpg",
+                    timestamp: null,
+                    postId: "1382189217218972189324"
                 }
             ]
         }
@@ -41,6 +58,7 @@ export default class Stories extends Component {
     }
     
     render(){
+        this.order = -1
     return (
         <div class="stories-wrapper">
             <ul id="story-container">
@@ -51,10 +69,10 @@ export default class Stories extends Component {
 
                 
                 {this.state.storyDatas.map((data)=> {
+                    this.order += 1
                     return(
-                        <li key={data.postId} class="story">
-                            <img src={data.storyImageURL} datas={data} class="story-image" alt="Stories from All Followed"/>
-                            <p class="story-user-name">{data.userName}</p>
+                        <li key={data.postId} class="story" >
+                            <ShowStoryModal data={data} order={this.order} storyDatas={this.state.storyDatas} />
                         </li>
                     )
                 })}
