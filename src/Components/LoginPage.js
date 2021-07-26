@@ -34,6 +34,8 @@ export default class LoginPage extends Component {
                     <Grid container>
                         <Grid item xs={6}>
                             <div>
+                                {/* Giriş yapmak ve o componenti render etmek için props */}
+
                                 <SignIn changerOne={this.logInStateToOneChanger} changerZero={this.logInStateToZeroChanger}/>
                             </div>
                                 
@@ -54,6 +56,7 @@ export default class LoginPage extends Component {
                     }
                     <Grid container>
                         <Grid item xs={6}>
+                                {/* Kayıt olmak ve o componenti render etmek için props */}
                             <div>
                                 <SignUp changerOne={this.logInStateToOneChanger} changerZero={this.logInStateToZeroChanger}/>
                             </div>

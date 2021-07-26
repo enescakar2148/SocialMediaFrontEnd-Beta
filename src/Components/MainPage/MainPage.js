@@ -32,7 +32,7 @@ export default class MainPage extends Component {
         });
       })
       .catch((err) => {
-        // alert(err);
+        alert(err);
       });
   };
 

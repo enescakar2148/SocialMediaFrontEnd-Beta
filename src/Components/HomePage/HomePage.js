@@ -8,10 +8,13 @@ export default class HomePage extends Component {
     render() {
         return (
             <div>
+            {/*
                 <NavBar />
                 <Feed />
+              */}
+                <LoginPage/>
             </div>
-            
+
         )
     }
 }

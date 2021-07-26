@@ -1,36 +1,67 @@
-import React, { Component } from 'react'
-import "./SignIn.css"
-import { Avatar } from '@material-ui/core'
+import React, { Component } from "react";
+import "../../css/SignIn.css";
 
 export default class SignIn extends Component {
-    render() {
-        return (
-            <div>
-                <div className="signInWrapper">
-                    <div className="companyAvatar">
-                        <Avatar  style={{display:'inline-flex', minWidth:"80px", minHeight:"80px" }}/>
-                        <div className="companyNametext">Company Name</div>
-                    </div>
-                    <div className="signOptions">
-                        <button onClick={this.props.changerZero} >SIGN IN</button>
-                        <button onClick={this.props.changerOne} >SIGN UP</button>
-                    </div>
-                    <div className="inputSection">
-                        <div className="emailInputDiv">
-                            <i />
-                            <input className="emailInput" type="text" placeholder="Email" />
-                        </div>
-                        <div className="passwordInputDiv">
-                            <i />
-                            <input className="passwordInput" type="password" placeholder="Password" />
-                        </div>
-                    </div>
-                    <div className="moreOptions">
-                        <div>Remember me</div>
-                        <div>Forgot Password?</div>
-                    </div>
-                    <button>SIGNIN</button>
-                    <div className="hrEffectDiv"></div>
+  render() {
+    return (
+      <div className="sign-in-wrapper">
+        {/* Compnay Section */}
+        <div className="company">
+          <i class="fab fa-telegram-plane" id="company-logo-icon"></i>
+          <h1 id="company-name">Company Name</h1>
+        </div>
+
+        {/* Buttons Section */}
+        <div className="sign-options">
+          <button
+            onClick={this.props.changerZero}
+            class="button active-option"
+            id="sign-in-button"
+          >
+            Sign In
+          </button>
+          <button
+            onClick={this.props.changerOne}
+            class="button"
+            id="sign-up-button"
+          >
+            Sign Up
+          </button>
+        </div>
+
+        <div className="input-section">
+          <div className="input-div">
+            <div class="icon-div-sign-option">
+              <i class="fas fa-user-alt icon-sign-option"></i>
+            </div>
+            <input
+              className="emailInput input"
+              type="text"
+              placeholder="Email"
+            />
+          </div>
+          <div className="input-div">
+            <div class="icon-div-sign-option">
+              <i class="fas fa-lock icon-sign-option"></i>
+            </div>
+            <input
+              className="passwordInput input"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div className="more-options">
+            <p id="forgot-pass-text">Forgot Password?</p>
+        </div>
+        <button id="go-feed-login">LOG IN</button>
+        <div className="hr">
+            {/* <p id="content-hr">lorem</p> */}
+        </div>
+
+        {/*
+                    
+                    
                     <div className="loginOptions">
                         <div>You can also login with:</div>
                         <div style={{display:'flex'}}>
@@ -39,8 +70,8 @@ export default class SignIn extends Component {
                             <Avatar/>
                         </div>
                     </div>
-                </div>
-            </div>
-        )
-    }
+                </div> */}
+      </div>
+    );
+  }
 }

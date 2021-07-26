@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "../SignIn/SignIn.css"
+import "../../css/SignUp.css"
 import { Avatar } from '@material-ui/core'
 import firebase from "firebase";
 import axios from 'axios';
