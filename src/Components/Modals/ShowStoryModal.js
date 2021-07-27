@@ -1,5 +1,6 @@
 import { Grid } from "@material-ui/core";
 import React, { Component } from "react";
+import pp1 from "../../images/pp_2.png";
 import ReactCircleModal from "react-circle-modal";
 import "../../css/showStory.css";
 
@@ -18,6 +19,12 @@ export default class ShowStoryModal extends Component {
     this.props.storyDatas.forEach((element) => {
       this.size += 1;
     });
+    /*
+    this.interval = setInterval(() => {
+      this.nextButtonFunc()
+    }, 10000)
+    this.interval = ""
+    */
   };
 
   nextButtonFunc = () => {
@@ -28,7 +35,24 @@ export default class ShowStoryModal extends Component {
         userName: this.props.storyDatas[this.state.order + 1].userName,
       });
     }
+    /*else{
+      clearInterval(this.interval)
+      this.setState({
+        order: this.props.order,
+        imgUrl: this.props.storyDatas[this.props.order].storyImageURL,
+        userName: this.props.storyDatas[this.props.order].userName,
+      })
+    }
+    */
   };
+
+  clearFunc = () => {
+    this.setState({
+      order: this.props.order,
+      imgUrl: this.props.storyDatas[this.props.order].storyImageURL,
+      userName: this.props.storyDatas[this.props.order].userName,
+    })
+  }
 
   prevButtonFunc = () => {
     if (this.state.order > 0) {
@@ -42,25 +66,27 @@ export default class ShowStoryModal extends Component {
 
   render() {
     return (
-      <ReactCircleModal
+      <ReactCircleModal 
         backgroundColor="transparent"
-        toogleComponent={(onClick) => (
-          <div onClick={onClick}>
+        toogleComponent={(onClick) => {          
+          return(
+          <div onClick={onClick} style={{textAlign:"center"}}>
             <img
-              src={this.props.data.storyImageURL}
+              src={pp1}
               datas={this.props.data}
               class="story-image"
               alt="Stories from All Followed"
             />
             <p class="story-user-name">{this.props.data.userName}</p>
           </div>
-        )}
+        )}}
         // Optional fields and their default values
         offsetX={0}
         offsetY={0}
       >
-        {(onClick) => (
-          <div className="show-story-wrapper">
+        {(onClick) => {
+          return(
+          <div className="show-story-wrapper" >
             <div className="btn-previus">
               <button onClick={this.prevButtonFunc} id="previus" className="story-show-btn">
               <i class="fas fa-angle-left"></i>
@@ -69,7 +95,10 @@ export default class ShowStoryModal extends Component {
             <div className="story-content">
               <div className="story-toolbar">
                 <h1 id="story-user-name">{this.state.userName}</h1>
-                <button onClick={onClick} id="btn-close">
+                <button onClick={() => {
+                  onClick()
+                  this.clearFunc()
+                  }} id="btn-close">
                 <i class="fas fa-times-circle"></i>
                 </button>
               </div>
@@ -81,7 +110,7 @@ export default class ShowStoryModal extends Component {
               </button>
             </div>
           </div>
-        )}
+        )}}
       </ReactCircleModal>
     );
   }
