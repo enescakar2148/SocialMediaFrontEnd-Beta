@@ -53,7 +53,7 @@ export default class Stories extends Component {
             });
         })
         .catch((err) => {
-            // alert(err);
+            alert(err);
         });
     }
     
@@ -76,8 +76,8 @@ export default class Stories extends Component {
                         </li>
                     )
                 })}
+{/* 
 
-
                 <li class="story">
                     <img src={pp2} class="story-image" alt="Stories from All Followed"/>
                     <p class="story-user-name">Ahmet Köse</p>
@@ -117,7 +117,7 @@ export default class Stories extends Component {
                 <li class="story">
                     <img src={pp1} class="story-image" alt="Stories from All Followed"/>
                     <p class="story-user-name">Selman Veli</p>
-                </li>
+                </li> */}
             </ul>
         </div>
     )}
