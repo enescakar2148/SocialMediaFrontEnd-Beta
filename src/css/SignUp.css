@@ -133,14 +133,6 @@
     align-items: center;
 }
 
-input[type="file"]{
-    display: none;
-    /* border: 1px solid transparent;
-    background-color: rgb(233, 73, 73);
-    color: #000;
-    border-radius: 5px;
-    padding: .5rem .25rem; */
-}
 #choose-pp-button{
     border: 1px solid #ccc;
     display: inline-block;
