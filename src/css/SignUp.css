@@ -1,0 +1,193 @@
+@import url("./colours.css");
+
+.sign-in-wrapper {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Company header */
+.company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#company-logo-icon {
+  color: var(--light-blue);
+  font-size: 7rem;
+  padding: 1rem;
+}
+#company-name {
+  color: var(--light-blue);
+}
+
+/* Buttons */
+.sign-options {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+}
+.button {
+  width: 100%;
+  margin: 1rem;
+  padding: .75rem 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: var(--bg);
+  color: var(--bg-posts);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover {
+    background-color: var(--bg-posts);
+    color: #fff;
+}
+.active-option {
+    background-color: transparent;
+}
+
+/* İnputs */
+.input-section{
+    max-width: 500px;
+    width: 100%;
+}
+.input-div{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin: .75rem 0;
+}
+.icon-div-sign-option{
+    width: 50px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-right: .25rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-sign-option{
+    color: rgba(0, 0, 0, 0.7);
+}
+.input{
+    width: 100%;
+    padding: .75rem .5rem;
+    margin: .5rem 0;
+    border: 2px solid rgba(0, 0, 0, 0.192);
+    border-radius: 5px;
+    height: 100%;
+}
+.input:focus{
+    outline: none;
+    border: 2px solid var(--light-blue);
+    border-radius: 5px;
+}
+
+/* More Option */
+.mpre-options{
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+#forgot-pass-text{
+    color: var(--light-blue);
+    font-size: .75rem;
+    cursor: pointer;
+}
+
+#go-feed-login{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 1rem;
+    padding: .75rem 0; 
+    color: #fff;
+    background-color: var(--bg-posts);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#go-feed-login:hover{
+    background-color: #fff;
+    color: var(--bg-posts);
+    border: 1px solid var(--bg-posts);
+}
+
+.hr{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+    max-height: 5px;
+    height: 100%;
+    max-width: 500px;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.choose-pp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"]{
+    display: none;
+    /* border: 1px solid transparent;
+    background-color: rgb(233, 73, 73);
+    color: #000;
+    border-radius: 5px;
+    padding: .5rem .25rem; */
+}
+#choose-pp-button{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/*
+.companyAvatar{
+}
+
+.companyNametext{
+
+}
+
+.signOptions{
+
+}
+
+.inputSection{
+
+}
+
+.emailInputDiv{
+
+}
+
+.emailInput{
+
+}
+
+.passwordInputDiv{
+
+}
+
+.passwordInput{
+
+}
+
+.moreOptions{
+
+}
+
+.hrEffectDiv{
+
+}
+
+.loginOptions{
+
+} */

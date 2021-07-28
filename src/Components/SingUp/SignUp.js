@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import "../../css/SignUp.css"
-import { Avatar } from '@material-ui/core'
+import React, { Component } from "react";
+import "../../css/SignUp.css";
+import { Avatar } from "@material-ui/core";
 import firebase from "firebase";
-import axios from 'axios';
+import axios from "axios";
 
 // Required for side-effects
 require("firebase/firestore");
@@ -20,91 +20,115 @@ if (!firebase.apps.length) {
 var storage = firebase.storage();
 
 function uuidv4() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        // eslint-disable-next-line 
-      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-      return v.toString(16);
-    });
-  }
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+    // eslint-disable-next-line
+    var r = (Math.random() * 16) | 0,
+      v = c == "x" ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
 
 export default class SignUp extends Component {
+  userNameInputListener = (event) => {
+    this.userName = event.target.value;
+  };
 
-    userNameInputListener = (event) => {
-        this.userName = event.target.value
-    }
+  passwordInputListener = (event) => {
+    this.password = event.target.value;
+    window.location = "/home";
+  };
 
-    passwordInputListener = (event) => {
-        this.password = event.target.value
-        window.location = "/home"
-    }
+  profilePhotoHandler = (event) => {
+    this.file = event.target.files[0];
+  };
 
-    profilePhotoHandler = (event) => {
-        this.file = event.target.files[0]
-    }
+  signUpButtonFunc = () => {
+    if (this.file) {
+      let storageRef = storage.ref().child("profilePhotos").child(uuidv4());
 
-    signUpButtonFunc = () => {
-        if(this.file){
-            let storageRef = storage.ref().child("profilePhotos").child(uuidv4())
+      storageRef.put(this.file).then((snapshot) => {
+        snapshot.ref.getDownloadURL().then((url) => {
+          let bundle = {
+            userName: this.userName,
+            ppURL: url,
+          };
 
-            storageRef.put(this.file).then((snapshot)=> {
-                snapshot.ref.getDownloadURL().then((url)=>{
-                    let bundle = {
-                        userName: this.userName,
-                        ppURL: url
-                    }
-
-                    axios.post("http://localhost:8080/api/auth/register", bundle).then((response)=>  {
-                        //TODO burada location değişecek
-                        window.location = "http://www.google.com";
-                    }).catch((err)=> {
-                        // alert("Bir hata meydana geldi: "+ err)
-                    })
-                })
+          axios
+            .post("http://localhost:8080/api/auth/register", bundle)
+            .then((response) => {
+              //TODO burada location değişecek
+              window.location = "http://www.google.com";
             })
-        }
+            .catch((err) => {
+              // alert("Bir hata meydana geldi: "+ err)
+            });
+        });
+      });
     }
+  };
 
-    render() {
-        return (
-            <div>
-                <div className="signInWrapper">
-                    <div className="companyAvatar">
-                        <Avatar  style={{display:'inline-flex', minWidth:"80px", minHeight:"80px" }}/>
-                        <div className="companyNametext">Company Name</div>
-                    </div>
-                    <div className="signOptions">
-                        <button onClick={this.props.changerZero} >SIGN IN</button>
-                        <button onClick={this.props.changerOne} >SIGN UP</button>
-                    </div>
-                    <div className="inputSection">
-                        <div className="emailInputDiv">
-                            <i />
-                            <input onChange={this.userNameInputListener} className="emailInput" type="text" placeholder="Username" />
-                        </div>
-                        <div className="passwordInputDiv">
-                            <i />
-                            <input onChange={this.passwordInputListener} className="passwordInput" type="password" placeholder="Password" />
-                        </div>
-                        <div>
-                            <div>Profile Photo</div>
-                            <input onChange={this.profilePhotoHandler} type="file" />
-                        </div>
-                    </div>
-                    <div className="moreOptions">
-                        <div>Remember me</div>
-                    </div>
-                    <button onClick={this.signUpButtonFunc}>SIGN UP</button>
-                    <div className="hrEffectDiv"></div>
-                    <div className="loginOptions">
-                        <div>You can also sign up with:</div>
-                        <div style={{display:'flex'}}>
-                            <Avatar/>
-                            <Avatar/>
-                            <Avatar/>
-                        </div>
-                    </div>
-                </div>
+  render() {
+    return (
+      <div className="sign-in-wrapper">
+        {/* Compnay Section */}
+        <div className="company">
+          <i class="fab fa-telegram-plane" id="company-logo-icon"></i>
+          <h1 id="company-name">Company Name</h1>
+        </div>
+        {/* Buttons Section */}
+        <div className="sign-options">
+          <button
+            onClick={this.props.changerZero}
+            class="button"
+            id="sign-in-button"
+          >
+            Sign In
+          </button>
+          <button
+            onClick={this.props.changerOne}
+            class="button active-option"
+            id="sign-up-button"
+          >
+            Sign Up
+          </button>
+        </div>
+        <div className="input-section">
+          <div className="input-div">
+            <div class="icon-div-sign-option">
+              <i class="fas fa-user-alt icon-sign-option"></i>
             </div>
-        )
-    }
+            <input
+              className="emailInput input"
+              type="text"
+              placeholder="Email"
+            />
+          </div>
+          <div className="input-div">
+            <div class="icon-div-sign-option">
+              <i class="fas fa-lock icon-sign-option"></i>
+            </div>
+            <input
+              className="passwordInput input"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <div className="choose-pp">
+            <p id="choose-pp-text">Profil Fotoğrafı Seç </p>
+            <div className="pp-option">
+              <input
+                onChange={this.profilePhotoHandler}
+                type="file"
+                id="choose-pp-button"
+              />
+            </div>
+          </div>
+        </div>
+        <button id="go-feed-login" onClick={this.signUpButtonFunc}>
+          SIGN UP
+        </button>
+        <div className="hr"></div>
+      </div>
+    );
+  }
 }
