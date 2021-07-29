@@ -95,7 +95,7 @@ export default class Posts extends Component {
                     src={
                       "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
                     }
-                    onClick = { () => {
+                    onClick = { function() {
                       let filteredTagList = []
                       for (let index = 0; index < this.state.tags.length; index++) {
                         if(this.state.tags[index].postId === data.postId){
@@ -160,7 +160,7 @@ export default class Posts extends Component {
                         return (<option value={"@" + data.userName} ></option>)
                       })}
                     </datalist>
-                    <button onClick={() => {
+                    <button onClick={function() {
                       if(this.tagInput){
                         let bundle = {
                           userId: "randomuuid",
@@ -170,7 +170,7 @@ export default class Posts extends Component {
                         axios.post("http://localhost:8080/api/tags/save", bundle).then((response)=> {
                           alert("başarılı")
                         }).catch((err)=>{
-                            // alert("Bir hata meydana geldi: "+err)
+                            alert("Bir hata meydana geldi: "+err)
                         })
                       }
                     }} id="tag-button">
