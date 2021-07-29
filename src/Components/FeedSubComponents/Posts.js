@@ -35,6 +35,7 @@ export default class Posts extends Component {
         this.setState({
           usersData: users,
         });
+        console.log(users);
       })
       .catch((err) => {
         alert(err);

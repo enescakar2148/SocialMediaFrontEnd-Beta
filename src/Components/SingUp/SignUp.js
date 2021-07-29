@@ -100,6 +100,17 @@ export default class SignUp extends Component {
             <input
               className="emailInput input"
               type="text"
+              placeholder="User Name"
+              onChange= {this.userNameInputListener}
+            />
+          </div>
+          <div className="input-div">
+            <div class="icon-div-sign-option">
+              <i class="fas fa-user-alt icon-sign-option"></i>
+            </div>
+            <input
+              className="emailInput input"
+              type="text"
               placeholder="Email"
             />
           </div>
