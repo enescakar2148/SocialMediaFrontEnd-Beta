@@ -57,10 +57,10 @@ export default class SignUp extends Component {
             .post("http://localhost:8080/api/auth/register", bundle)
             .then((response) => {
               //TODO burada location değişecek
-              window.location = "http://www.google.com";
+              window.location = "/home";
             })
             .catch((err) => {
-              // alert("Bir hata meydana geldi: "+ err)
+              alert("Bir hata meydana geldi: "+ err)
             });
         });
       });
