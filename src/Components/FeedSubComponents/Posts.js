@@ -39,10 +39,27 @@ export default class Posts extends Component {
       .catch((err) => {
         alert(err);
       });
+
+    let tags;
+
+    axios
+      .get("http://localhost:8080/api/tags/")
+      .then((resp) => {
+        tags = resp.data;
+        this.setState({
+          tags: tags,
+        });
+      })
+      .catch((err) => {
+        alert(err);
+      });
+
+
   };
 
   addTag = () => {
-    this.getInputData();
+    //this.getInputData();
+    
   };
   getInputData = () => {
     const data = document.getElementById("comment-input").value;
@@ -53,7 +70,7 @@ export default class Posts extends Component {
   // userName
 
   tagInputListener = (event) => {
-    
+    this.tagInput = event.target.value
   }
 
   controleWord = (ch) => {
@@ -66,7 +83,7 @@ export default class Posts extends Component {
     return this.state.usersData;
   };
   render() {
-    if(this.state.usersData){
+    if(this.state.usersData && this.state.tags){
       return (
         <div class="posts-wrapper">
           {this.state.postDatas.map((data) => {
@@ -77,6 +94,20 @@ export default class Posts extends Component {
                     src={
                       "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
                     }
+                    onClick = { () => {
+                      let filteredTagList = []
+                      for (let index = 0; index < this.state.tags.length; index++) {
+                        if(this.state.tags[index].postId === data.postId){
+                          filteredTagList.push(this.state.tags[index])
+                        }
+                      }
+                      let text = ""
+                      for (let index = 0; index < filteredTagList.length; index++) {
+                        text = text + ", " + filteredTagList[index].userName
+                      }
+                      text = text + " tagged in this photo"
+                      alert(text)
+                    }}
                     id="pp-post"
                     alt="Profile Image"
                     style={{ borderRadius: "100px" }}
@@ -128,7 +159,20 @@ export default class Posts extends Component {
                         return (<option value={"@" + data.userName} ></option>)
                       })}
                     </datalist>
-                    <button onClick={this.addTag} id="tag-button">
+                    <button onClick={() => {
+                      if(this.tagInput){
+                        let bundle = {
+                          userId: "randomuuid",
+                          userName: this.tagInput,
+                          postId: data.postId
+                        }
+                        axios.post("http://localhost:8080/api/tags/save", bundle).then((response)=> {
+                          alert("başarılı")
+                        }).catch((err)=>{
+                            // alert("Bir hata meydana geldi: "+err)
+                        })
+                      }
+                    }} id="tag-button">
                       <i class="fas fa-chevron-right" id="tag-send-button"></i>
                     </button>
                   </div>
