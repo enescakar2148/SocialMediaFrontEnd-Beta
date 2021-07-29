@@ -44,8 +44,8 @@ export default class SignUp extends Component {
 
   signUpButtonFunc = () => {
     if (this.file) {
-      let storageRef = storage.ref().child("profilePhotos").child(uuidv4());
-
+      let storageRef = storage.ref().child("profilePhotos").child(uuidv4()); 
+      
       storageRef.put(this.file).then((snapshot) => {
         snapshot.ref.getDownloadURL().then((url) => {
           let bundle = {

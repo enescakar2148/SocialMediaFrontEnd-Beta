@@ -50,6 +50,13 @@ export default class Posts extends Component {
     this.controleWord(data.charAt(0));
   };
 
+  // userId
+  // userName
+
+  tagInputListener = (event) => {
+    
+  }
+
   controleWord = (ch) => {
     if (ch === "@") {
       const result = this.connectApi();
@@ -111,9 +118,15 @@ export default class Posts extends Component {
                 <div className="comment-wrapper">
                   <input
                     type="text"
+                    list="usernames"
                     id="comment-input"
                     placeholder="Tag a Friends"
                   />
+                  <datalist id="usernames">
+                    {this.state.usersData.map((data)=> {
+                      return (<option value={"@" + data.userName} ></option>)
+                    })}
+                  </datalist>
                   <button onClick={this.addTag} id="tag-button">
                     <i class="fas fa-chevron-right" id="tag-send-button"></i>
                   </button>
