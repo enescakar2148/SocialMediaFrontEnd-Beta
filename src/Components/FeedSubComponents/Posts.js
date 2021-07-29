@@ -67,75 +67,146 @@ export default class Posts extends Component {
     return this.state.usersData;
   };
   render() {
-    return (
-      <div class="posts-wrapper">
-        {this.state.postDatas.map((data) => {
-          return (
-            <div key={data.photoUrl}>
-              <div class="user-info-wrapper">
-                <img
-                  src={
-                    "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
-                  }
-                  id="pp-post"
-                  alt="Profile Image"
-                  style={{ borderRadius: "100px" }}
-                />
-                <p id="status-user-name" class="status">
-                  {data.userName}
-                </p>
-              </div>
-              <div class="post-image">
-                <img src={data.photoUrl} id="post-image" alt="Post Image" />
-              </div>
-              <div class="options-wrapper">
-                <div class="actions">
-                  <ul class="action-icons">
-                    <li class="action-icon">
-                      <i class="far fa-heart"></i>
-                    </li>
-                    <li class="action-icon">
-                      <i class="far fa-comment"></i>
-                    </li>
-                    <li class="action-icon">
-                      <i class="fas fa-share"></i>
-                    </li>
-                    <li class="action-icon">
-                      <i class="far fa-bookmark"></i>
-                    </li>
-                  </ul>
-                </div>
-                <div class="texts">
-                  <p id="option-user-name" class="status">
-                    User Name
-                  </p>
-                  <p id="description">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s
-                  </p>
-                </div>
-                <div className="comment-wrapper">
-                  <input
-                    type="text"
-                    list="usernames"
-                    id="comment-input"
-                    placeholder="Tag a Friends"
+    if(this.state.usersData){
+      return (
+        <div class="posts-wrapper">
+          {this.state.postDatas.map((data) => {
+            return (
+              <div key={data.photoUrl}>
+                <div class="user-info-wrapper">
+                  <img
+                    src={
+                      "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
+                    }
+                    id="pp-post"
+                    alt="Profile Image"
+                    style={{ borderRadius: "100px" }}
                   />
-                  <datalist id="usernames">
-                    {this.state.usersData.map((data)=> {
-                      return (<option value={"@" + data.userName} ></option>)
-                    })}
-                  </datalist>
-                  <button onClick={this.addTag} id="tag-button">
-                    <i class="fas fa-chevron-right" id="tag-send-button"></i>
-                  </button>
+                  <p id="status-user-name" class="status">
+                    {data.userName}
+                  </p>
+                </div>
+                <div class="post-image">
+                  <img src={data.photoUrl} id="post-image" alt="Post Image" />
+                </div>
+                <div class="options-wrapper">
+                  <div class="actions">
+                    <ul class="action-icons">
+                      <li class="action-icon">
+                        <i class="far fa-heart"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="far fa-comment"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="fas fa-share"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="far fa-bookmark"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="texts">
+                    <p id="option-user-name" class="status">
+                      User Name
+                    </p>
+                    <p id="description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                  </div>
+                  <div className="comment-wrapper">
+                    <input
+                      type="text"
+                      list="usernames"
+                      id="comment-input"
+                      placeholder="Tag a Friends"
+                    />
+                    <datalist id="usernames">
+                      {
+                      this.state.usersData.map((data)=> {
+                        return (<option value={"@" + data.userName} ></option>)
+                      })}
+                    </datalist>
+                    <button onClick={this.addTag} id="tag-button">
+                      <i class="fas fa-chevron-right" id="tag-send-button"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    );
+            );
+          })}
+        </div>
+      );
+    }else{
+      return (
+        <div class="posts-wrapper">
+          {this.state.postDatas.map((data) => {
+            return (
+              <div key={data.photoUrl}>
+                <div class="user-info-wrapper">
+                  <img
+                    src={
+                      "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
+                    }
+                    id="pp-post"
+                    alt="Profile Image"
+                    style={{ borderRadius: "100px" }}
+                  />
+                  <p id="status-user-name" class="status">
+                    {data.userName}
+                  </p>
+                </div>
+                <div class="post-image">
+                  <img src={data.photoUrl} id="post-image" alt="Post Image" />
+                </div>
+                <div class="options-wrapper">
+                  <div class="actions">
+                    <ul class="action-icons">
+                      <li class="action-icon">
+                        <i class="far fa-heart"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="far fa-comment"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="fas fa-share"></i>
+                      </li>
+                      <li class="action-icon">
+                        <i class="far fa-bookmark"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="texts">
+                    <p id="option-user-name" class="status">
+                      User Name
+                    </p>
+                    <p id="description">
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s
+                    </p>
+                  </div>
+                  <div className="comment-wrapper">
+                    <input
+                      type="text"
+                      list="usernames"
+                      id="comment-input"
+                      placeholder="Tag a Friends"
+                    />
+                    
+                    <button onClick={this.addTag} id="tag-button">
+                      <i class="fas fa-chevron-right" id="tag-send-button"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+    
   }
 }
