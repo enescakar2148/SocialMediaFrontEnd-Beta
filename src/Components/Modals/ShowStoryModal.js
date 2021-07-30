@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 import React, { Component } from "react";
-import pp1 from "../../images/pp_2.png";
+import pp1 from "../../images/pp_1.png";
 import ReactCircleModal from "react-circle-modal";
 import "../../css/showStory.css";
 

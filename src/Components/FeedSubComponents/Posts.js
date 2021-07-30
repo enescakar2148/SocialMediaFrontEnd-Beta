@@ -70,21 +70,7 @@ export default class Posts extends Component {
                   <img
                     src={
                       pp
-                    } 
-                    onClick = {() => {
-                      let filteredTagList = []
-                      for (let index = 0; index < this.state.tags.length; index++) {
-                        if(this.state.tags[index].postId === data.postId){
-                          filteredTagList.push(this.state.tags[index])
-                        }
-                      }
-                      let text = ""
-                      for (let index = 0; index < filteredTagList.length; index++) {
-                        text = text + " " + filteredTagList[index].userName
-                      }
-                      text = text + " tagged in this photo"
-                      alert(text)
-                    }}
+                    }
                     id="pp-post"
                     alt="Profile Image"
                     style={{ borderRadius: "5px" }}
@@ -95,7 +81,7 @@ export default class Posts extends Component {
                 </div>
                 <div class="post-image">
                   <img src={data.photoUrl} id="post-image" alt="Post Image" 
-                  onClick = { function() {
+                  onClick = { () => {
                     let filteredTagList = []
                     for (let index = 0; index < this.state.tags.length; index++) {
                       if(this.state.tags[index].postId === data.postId){
@@ -104,7 +90,7 @@ export default class Posts extends Component {
                     }
                     let text = ""
                     for (let index = 0; index < filteredTagList.length; index++) {
-                      text = text + ", " + filteredTagList[index].userName
+                      text = text + " " + filteredTagList[index].userName
                     }
                     text = text + " tagged in this post"
                     alert(text)
