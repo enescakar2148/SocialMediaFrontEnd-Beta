@@ -93,6 +93,9 @@ export default class Posts extends Component {
                       text = text + " " + filteredTagList[index].userName
                     }
                     text = text + " tagged in this post"
+                    if(filteredTagList.length === 0){
+                      text = "No one tagged in this photo."
+                    }
                     alert(text)
                   }}
                   />
