@@ -44,7 +44,7 @@ export default class SharePost extends Component {
             storageRef.put(this.file).then((snapshot)=> {
                 snapshot.ref.getDownloadURL().then((url)=>{
                     let bundle = {
-                        userName: "Celal Şengör",
+                        userName: "Emre Akın",
                         userId: uuidv4(),
                         timestamp: null,
                         photoUrl: url,
@@ -52,10 +52,11 @@ export default class SharePost extends Component {
                     }
 
                     axios.post("http://localhost:8080/api/posts/new", bundle).then((response)=>  {
-                        alert("Başarılı");
-                        window.location.reload();
+                        // alert("Başarılı");
+                        console.log(bundle);
+                        // window.location.reload();
                     }).catch((err)=> {
-                        alert("Bir hata meydana geldi: "+ err)
+                        alert("Bir şey oldu! "+ err)
                     })
                 })
             })
