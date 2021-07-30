@@ -95,7 +95,7 @@ export default class Posts extends Component {
                 </div>
                 <div class="post-image">
                   <img src={data.photoUrl} id="post-image" alt="Post Image" 
-                  onClick = { function() {
+                  onClick = { () => {
                     let filteredTagList = []
                     for (let index = 0; index < this.state.tags.length; index++) {
                       if(this.state.tags[index].postId === data.postId){
@@ -107,6 +107,9 @@ export default class Posts extends Component {
                       text = text + ", " + filteredTagList[index].userName
                     }
                     text = text + " tagged in this post"
+                    if(filteredTagList.length === 0){
+                      text = "No one tagged in this photo."
+                    }
                     alert(text)
                   }}
                   />
