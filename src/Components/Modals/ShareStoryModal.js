@@ -51,7 +51,7 @@ export default class ShareStoryModal extends Component {
             storageRef.put(this.file).then((snapshot) => {
                 snapshot.ref.getDownloadURL().then((url)=> {
                     let bundle = {
-                        userName: "Celal Şengör",
+                        userName: "Emre Akın",
                         userId: uuidv4(),
                         timestamp: null,
                         storyImageURL: url

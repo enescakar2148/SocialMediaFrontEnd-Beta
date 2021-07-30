@@ -58,7 +58,7 @@ export default class SharePostModal extends Component {
                     })
 
                     let bundle = {
-                        userName: "Celal Şengör",
+                        userName: "Emre Akın",
                         userId: uuidv4(),
                         timestamp: null,
                         photoUrl: url,
