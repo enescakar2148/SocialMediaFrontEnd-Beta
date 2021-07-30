@@ -161,17 +161,23 @@ export default class Posts extends Component {
                       })}
                     </datalist>
                     <button onClick={function() {
-                      if(this.tagInput){
+                      let input = document.getElementById("comment-input");
+                      const value = input.value;
+                      if(value.charAt(0) !== "" ){
                         let bundle = {
                           userId: "randomuuid",
-                          userName: this.tagInput,
+                          userName: input.value,
                           postId: data.postId
                         }
                         axios.post("http://localhost:8080/api/tags/save", bundle).then((response)=> {
-                          alert("başarılı")
+                          alert(`${value} Kişisi gönderine Etiketlendi!`)
+                          window.location.reload();
                         }).catch((err)=>{
                             alert("Bir hata meydana geldi: "+err)
                         })
+                      }
+                      else{
+                        alert("Boş Bırakma")
                       }
                     }} id="tag-button">
                       <i class="fas fa-chevron-right" id="tag-send-button"></i>
