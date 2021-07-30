@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../../css/global.css";
 import "../../css/posts.css";
-
+import pp from "../../images/pp_1.png"
 export default class Posts extends Component {
   constructor(props) {
     super(props);
@@ -59,31 +59,6 @@ export default class Posts extends Component {
 
   };
 
-  // addTag = () => {
-  //   //this.getInputData();
-    
-  // };
-  // getInputData = () => {
-  //   const data = document.getElementById("comment-input").value;
-  //   this.controleWord(data.charAt(0));
-  // };
-
-  // // userId
-  // // userName
-
-  // tagInputListener = (event) => {
-  //   this.tagInput = event.target.value
-  // }
-
-  // controleWord = (ch) => {
-  //   if (ch === "@") {
-  //     const result = this.connectApi();
-  //     console.log(result)
-  //   }
-  // };
-  // connectApi = () => {
-  //   return this.state.usersData;
-  // };
   render() {
     if(this.state.usersData && this.state.tags){
       return (
@@ -94,8 +69,22 @@ export default class Posts extends Component {
                 <div class="user-info-wrapper">
                   <img
                     src={
-                      data.photoUrl
+                      pp
                     } 
+                    onClick = {() => {
+                      let filteredTagList = []
+                      for (let index = 0; index < this.state.tags.length; index++) {
+                        if(this.state.tags[index].postId === data.postId){
+                          filteredTagList.push(this.state.tags[index])
+                        }
+                      }
+                      let text = ""
+                      for (let index = 0; index < filteredTagList.length; index++) {
+                        text = text + " " + filteredTagList[index].userName
+                      }
+                      text = text + " tagged in this photo"
+                      alert(text)
+                    }}
                     id="pp-post"
                     alt="Profile Image"
                     style={{ borderRadius: "5px" }}
@@ -200,7 +189,7 @@ export default class Posts extends Component {
                 <div class="user-info-wrapper">
                   <img
                     src={
-                      "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
+                      pp
                     }
                     id="pp-post"
                     alt="Profile Image"
