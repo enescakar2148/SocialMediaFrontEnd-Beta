@@ -22,6 +22,9 @@
     margin-bottom: .5rem;
     margin-top: 2rem;
 }
+#user-pp{
+    width: 75px;
+}
 
 .status{
     margin-left: .5rem;

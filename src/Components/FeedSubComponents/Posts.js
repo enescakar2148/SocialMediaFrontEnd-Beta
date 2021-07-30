@@ -58,31 +58,31 @@ export default class Posts extends Component {
 
   };
 
-  addTag = () => {
-    //this.getInputData();
+  // addTag = () => {
+  //   //this.getInputData();
     
-  };
-  getInputData = () => {
-    const data = document.getElementById("comment-input").value;
-    this.controleWord(data.charAt(0));
-  };
+  // };
+  // getInputData = () => {
+  //   const data = document.getElementById("comment-input").value;
+  //   this.controleWord(data.charAt(0));
+  // };
 
-  // userId
-  // userName
+  // // userId
+  // // userName
 
-  tagInputListener = (event) => {
-    this.tagInput = event.target.value
-  }
+  // tagInputListener = (event) => {
+  //   this.tagInput = event.target.value
+  // }
 
-  controleWord = (ch) => {
-    if (ch === "@") {
-      const result = this.connectApi();
-      console.log(result)
-    }
-  };
-  connectApi = () => {
-    return this.state.usersData;
-  };
+  // controleWord = (ch) => {
+  //   if (ch === "@") {
+  //     const result = this.connectApi();
+  //     console.log(result)
+  //   }
+  // };
+  // connectApi = () => {
+  //   return this.state.usersData;
+  // };
   render() {
     if(this.state.usersData && this.state.tags){
       return (
@@ -93,8 +93,8 @@ export default class Posts extends Component {
                 <div class="user-info-wrapper">
                   <img
                     src={
-                      "https://pbs.twimg.com/profile_images/1364515340424732674/Gh0U0xuU_400x400.jpg"
-                    }
+                      data.photoUrl
+                    } 
                     onClick = { function() {
                       let filteredTagList = []
                       for (let index = 0; index < this.state.tags.length; index++) {
@@ -111,7 +111,7 @@ export default class Posts extends Component {
                     }}
                     id="pp-post"
                     alt="Profile Image"
-                    style={{ borderRadius: "100px" }}
+                    style={{ borderRadius: "5px" }}
                   />
                   <p id="status-user-name" class="status">
                     {data.userName}

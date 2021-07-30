@@ -76,48 +76,6 @@ export default class Stories extends Component {
                         </li>
                     )
                 })}
-{/* 
-
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Ahmet Köse</p>
-                </li>
-                <li class="story">
-                    <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Selman Veli</p>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Ahmet Köse</p>
-                </li>
-                <li class="story">
-                    <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Selman Veli</p>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Ahmet Köse</p>
-                </li>
-                <li class="story">
-                    <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Selman Veli</p>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Ahmet Köse</p>
-                </li>
-                <li class="story">
-                    <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Selman Veli</p>
-                </li>
-                <li class="story">
-                    <img src={pp2} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Ahmet Köse</p>
-                </li>
-                <li class="story">
-                    <img src={pp1} class="story-image" alt="Stories from All Followed"/>
-                    <p class="story-user-name">Selman Veli</p>
-                </li> */}
             </ul>
         </div>
     )}

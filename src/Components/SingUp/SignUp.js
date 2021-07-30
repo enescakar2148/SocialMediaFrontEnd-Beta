@@ -153,7 +153,7 @@ export default class SignUp extends Component {
               placeholder="Password"
             />
           </div>
-          
+          {button}
         </div>
         <button id="go-feed-login" onClick={this.signUpButtonFunc}>
           SIGN UP

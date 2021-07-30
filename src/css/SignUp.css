@@ -89,11 +89,11 @@
 }
 
 /* More Option */
-.mpre-options{
+/* .mpre-options{
     max-width: 500px;
     width: 100%;
     text-align: center;
-}
+} */
 #forgot-pass-text{
     color: var(--light-blue);
     font-size: .75rem;
