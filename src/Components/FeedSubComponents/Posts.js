@@ -8,6 +8,7 @@ export default class Posts extends Component {
     super(props);
     this.state = {
       postDatas: [],
+      tags: []
     };
   }
 
@@ -95,20 +96,6 @@ export default class Posts extends Component {
                     src={
                       data.photoUrl
                     } 
-                    onClick = { function() {
-                      let filteredTagList = []
-                      for (let index = 0; index < this.state.tags.length; index++) {
-                        if(this.state.tags[index].postId === data.postId){
-                          filteredTagList.push(this.state.tags[index])
-                        }
-                      }
-                      let text = ""
-                      for (let index = 0; index < filteredTagList.length; index++) {
-                        text = text + ", " + filteredTagList[index].userName
-                      }
-                      text = text + " tagged in this photo"
-                      alert(text)
-                    }}
                     id="pp-post"
                     alt="Profile Image"
                     style={{ borderRadius: "5px" }}
@@ -118,7 +105,22 @@ export default class Posts extends Component {
                   </p>
                 </div>
                 <div class="post-image">
-                  <img src={data.photoUrl} id="post-image" alt="Post Image" />
+                  <img src={data.photoUrl} id="post-image" alt="Post Image" 
+                  onClick = { function() {
+                    let filteredTagList = []
+                    for (let index = 0; index < this.state.tags.length; index++) {
+                      if(this.state.tags[index].postId === data.postId){
+                        filteredTagList.push(this.state.tags[index])
+                      }
+                    }
+                    let text = ""
+                    for (let index = 0; index < filteredTagList.length; index++) {
+                      text = text + ", " + filteredTagList[index].userName
+                    }
+                    text = text + " tagged in this post"
+                    alert(text)
+                  }}
+                  />
                 </div>
                 <div class="options-wrapper">
                   <div class="actions">
