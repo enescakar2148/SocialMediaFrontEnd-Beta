@@ -8,7 +8,7 @@ import firebase from "firebase";
 // Required for side-effects
 require("firebase/firestore");
 
-
+// Setting Firebase
 if (!firebase.apps.length) {
   firebase.initializeApp({
     apiKey: "AIzaSyAMrpDyNKZGKEUJ8Qv-KUvpzxcSxV4bQ8M",
@@ -21,6 +21,7 @@ if (!firebase.apps.length) {
 }
 var storage = firebase.storage();
 
+// Function for uuid creation
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         // eslint-disable-next-line 
@@ -44,6 +45,7 @@ export default class SharePostModal extends Component {
     }
 
     sharePost = () => {
+      /*  */
         if(this.file){
             this.setState({
               loading: 1

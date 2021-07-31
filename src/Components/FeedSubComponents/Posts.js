@@ -3,6 +3,7 @@ import axios from "axios";
 import "../../css/global.css";
 import "../../css/posts.css";
 import pp from "../../images/pp_1.png"
+
 export default class Posts extends Component {
   constructor(props) {
     super(props);
@@ -13,8 +14,8 @@ export default class Posts extends Component {
   }
 
   componentDidMount = () => {
+    /* Getting post datas from api */
     let data;
-
     axios
       .get("http://localhost:8080/api/posts")
       .then((resp) => {
@@ -26,9 +27,8 @@ export default class Posts extends Component {
       .catch((err) => {
         alert(err);
       });
-
+    /* Getting all the users that sign upped from api */
     let users;
-
     axios
       .get("http://localhost:8080/api/auth/users")
       .then((resp) => {
@@ -42,8 +42,8 @@ export default class Posts extends Component {
         alert(err);
       });
 
+    /* Getting all the tags from api */
     let tags;
-
     axios
       .get("http://localhost:8080/api/tags/")
       .then((resp) => {
@@ -55,8 +55,6 @@ export default class Posts extends Component {
       .catch((err) => {
         alert(err);
       });
-
-
   };
 
   render() {
@@ -82,6 +80,7 @@ export default class Posts extends Component {
                 <div class="post-image">
                   <img src={data.photoUrl} id="post-image" alt="Post Image" 
                   onClick = { () => {
+                    /* Filtering the tag list by postId of selected post */
                     let filteredTagList = []
                     for (let index = 0; index < this.state.tags.length; index++) {
                       if(this.state.tags[index].postId === data.postId){
@@ -141,6 +140,7 @@ export default class Posts extends Component {
                       })}
                     </datalist>
                     <button onClick={function() {
+                      /* Controlling the input and posting tag request if input isn't empty */
                       let input = document.getElementById("comment-input");
                       const value = input.value;
                       if(value.charAt(0) !== "" ){
@@ -149,6 +149,7 @@ export default class Posts extends Component {
                           userName: input.value,
                           postId: data.postId
                         }
+                        /* Posting tag to api */
                         axios.post("http://localhost:8080/api/tags/save", bundle).then((response)=> {
                           alert(`${value} Kişisi gönderine Etiketlendi!`)
                           window.location.reload();
