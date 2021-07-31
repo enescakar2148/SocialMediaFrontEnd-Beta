@@ -42,8 +42,8 @@ export default class Stories extends Component {
     }
 
     componentDidMount = () => {
+        /* Getting story datas from api */
         let data;
-
         axios
         .get("http://localhost:8080/api/stories")
         .then((resp) => {
@@ -58,6 +58,7 @@ export default class Stories extends Component {
     }
     
     render(){
+        /* Setting order variable to -1 for future use in stories */
         this.order = -1
     return (
         <div class="stories-wrapper">
@@ -69,6 +70,7 @@ export default class Stories extends Component {
 
                 
                 {this.state.storyDatas.map((data)=> {
+                    //Mapping story datas and creating a list item for each
                     this.order += 1
                     return(
                         <li key={data.postId} class="story" >
