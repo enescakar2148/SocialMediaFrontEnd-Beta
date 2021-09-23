@@ -18,6 +18,9 @@ export default class HomePage extends Component {
                         <Route path="/SocialMediaFrontEnd-Beta">
                             <LoginPage/>
                         </Route>
+                        <Route path="/">
+                            <LoginPage/>
+                        </Route>
                     </Switch>
                 </BrowserRouter>
             </div>
