@@ -18,7 +18,7 @@ export default class HomePage extends Component {
                         <Route path="/">
                             <LoginPage/>
                         </Route>
-                        <Route path="SocialMediaFrontEnd-Beta/">
+                        <Route path="">
                             <LoginPage/>
                         </Route>
                     </Switch>
