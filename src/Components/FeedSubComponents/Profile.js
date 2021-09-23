@@ -2,7 +2,8 @@ import React from "react";
 import "../../css/global.css";
 import "../../css/profile.css";
 
-import pp from "../../images/pp_1.png";
+import pp from '../../images/pp_1.png'
+
 
 export default function Profile() {
   return (

@@ -1,84 +1,73 @@
-import React, {Component}from 'react'
-import axios from 'axios';
+import React, { Component } from "react";
 import "../../css/stories.css";
 import "../../css/global.css";
-import pp1 from "../../images/pp_1.png";
-import pp2 from "../../images/pp_2.png";
-import ShareStoryModal from '../Modals/ShareStoryModal';
-import ShowStoryModal from '../Modals/ShowStoryModal';
+import enes from "../../images/enes.jpg";
+import ShowStoryModal from "../Modals/ShowStoryModal";
+import pp from "../../images/enespp.jpg";
 
 export default class Stories extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      storyDatas: [
+        {
+          id: 1001,
+          userName: "Enes Çakar",
+          userId: "123",
+          storyImageURL: enes,
+          timestamp: null,
+          postId: "138218921721897218932",
+          pp: pp,
+        },
+        {
+          id: 1002,
+          userName: "Başak Parlak",
+          userId: "456",
+          storyImageURL:
+            "https://diziseti.tv/wp-content/uploads/2018/03/Ba%C5%9Fak-Parlak-%C5%9Fevkat-yerimdardan-neden-ayr%C4%B1ld%C4%B1.jpg",
+          timestamp: null,
+          postId: "1382189217218972189325",
+          pp: "http://demo.naria.com.tr/ahmetkoralturk/upload/01_15c76a7becaebe.jpg",
+        },
+        {
+          id: 1003,
+          userName: "Hadise",
+          userId: "789",
+          storyImageURL:
+            "https://img-s1.onedio.com/id-60ab9d868028a34f0a5d6a33/rev-0/w-620/f-jpg/s-33ec58ed04edf317f1d8081e57a92cc1399c5a03.jpg",
+          timestamp: null,
+          postId: "1382189217218972189324",
+          pp: "https://i2.milimaj.com/i/milliyet/75/750x0/612f301586b245361c23fe86",
+        },
+      ],
+    };
+  }
 
-    constructor(props){
-        super(props);
-        this.state = {
-            storyDatas : [
-                {
-                    id: 1001,
-                    userName: "Celal Şengör",
-                    userId: "89123721987213",
-                    storyImageURL: "https://i.sozcu.com.tr/wp-content/uploads//2018/03/iecrop/celal-sengor_16_9_1519982463.jpg",
-                    timestamp: null,
-                    postId: "138218921721897218932"
-                },
-                {
-                    id: 1002,
-                    userName: "Celal Şengör",
-                    userId: "891237219872133",
-                    storyImageURL: "https://foto.sondakika.com/haber/2020/08/11/eduard-suess-madalyasi-prof-dr-celal-sengor-e-13496875_osd.jpg",
-                    timestamp: null,
-                    postId: "1382189217218972189325"
-                },
-                {
-                    id: 1003,
-                    userName: "Celal Şengör",
-                    userId: "891237219872132",
-                    storyImageURL: "https://cdntr1.img.sputniknews.com/img/103892/13/1038921346_0:0:1200:675_1200x675_80_0_0_2635ff037d0dc4d3b10e1769e83e74d2.jpg",
-                    timestamp: null,
-                    postId: "1382189217218972189324"
-                }
-            ]
-        }
-    }
-
-    componentDidMount = () => {
-        /* Getting story datas from api */
-        let data;
-        axios
-        .get("http://localhost:8080/api/stories")
-        .then((resp) => {
-            data = resp.data;
-            this.setState({
-                storyDatas: data,
-            });
-        })
-        .catch((err) => {
-            alert(err);
-        });
-    }
-    
-    render(){
-        /* Setting order variable to -1 for future use in stories */
-        this.order = -1
+  render() {
+    /* Setting order variable to -1 for future use in stories */
+    this.order = -1;
     return (
-        <div class="stories-wrapper">
-            <ul id="story-container">
-                <li class="story">
-                    <ShareStoryModal />
-                    <p class="story-user-name">Sen</p>
-                </li>
+      <div class="stories-wrapper">
+        <ul id="story-container">
+          <li class="story">
+              
+          </li>
 
-                
-                {this.state.storyDatas.map((data)=> {
-                    //Mapping story datas and creating a list item for each
-                    this.order += 1
-                    return(
-                        <li key={data.postId} class="story" >
-                            <ShowStoryModal data={data} order={this.order} storyDatas={this.state.storyDatas} />
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
-    )}
+          {this.state.storyDatas.map((data) => {
+            //Mapping story datas and creating a list item for each
+            this.order += 1;
+            return (
+              <li key={data.postId} class="story">
+                <ShowStoryModal
+                  data={data}
+                  order={this.order}
+                  storyDatas={this.state.storyDatas}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
 }

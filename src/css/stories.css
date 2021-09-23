@@ -37,6 +37,9 @@
 .story-image{
     height: 60px;
     border-radius: 10px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 100%;
 }
 .story-user-name{
     margin-top: .25rem;

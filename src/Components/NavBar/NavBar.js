@@ -1,8 +1,6 @@
 // import { Avatar, Grid } from "@material-ui/core";
 import React, { Component } from "react";
 import "@fortawesome/fontawesome-free/js/all.js";
-import uploadBtn from "../../images/upload.png";
-import SharePostModal from '../Modals/SharePostModal';
 
 import "../../css/global.css";
 import "../../css/NavBar.css";
@@ -14,7 +12,6 @@ export default class NavBar extends Component {
         {/* Search box */}
         <div class="search-bar">
           <input type="text" id="search-box" placeholder="Search" />
-          <SharePostModal />
         </div>
 
         {/* Nav İcons */}

@@ -33,7 +33,10 @@
 }
 
 #pp-post{
-    height: 50px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 /* Photo Settings */
 .post-image{

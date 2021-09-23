@@ -1,6 +1,4 @@
-import { Grid } from "@material-ui/core";
 import React, { Component } from "react";
-import pp1 from "../../images/pp_1.png";
 import ReactCircleModal from "react-circle-modal";
 import "../../css/showStory.css";
 
@@ -19,12 +17,7 @@ export default class ShowStoryModal extends Component {
     this.props.storyDatas.forEach((element) => {
       this.size += 1;
     });
-    /*
-    this.interval = setInterval(() => {
-      this.nextButtonFunc()
-    }, 10000)
-    this.interval = ""
-    */
+  
   };
 
   nextButtonFunc = () => {
@@ -35,15 +28,6 @@ export default class ShowStoryModal extends Component {
         userName: this.props.storyDatas[this.state.order + 1].userName,
       });
     }
-    /*else{
-      clearInterval(this.interval)
-      this.setState({
-        order: this.props.order,
-        imgUrl: this.props.storyDatas[this.props.order].storyImageURL,
-        userName: this.props.storyDatas[this.props.order].userName,
-      })
-    }
-    */
   };
 
   clearFunc = () => {
@@ -72,7 +56,7 @@ export default class ShowStoryModal extends Component {
           return(
           <div onClick={onClick} style={{textAlign:"center"}}>
             <img
-              src={pp1}
+              src={this.props.data.pp}
               datas={this.props.data}
               class="story-image"
               alt="Stories from All Followed"
