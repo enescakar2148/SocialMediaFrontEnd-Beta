@@ -18,7 +18,7 @@ export default class HomePage extends Component {
                         <Route path="/">
                             <LoginPage/>
                         </Route>
-                        <Route path="">
+                        <Route path="/#/">
                             <LoginPage/>
                         </Route>
                     </Switch>
