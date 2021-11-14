@@ -9,7 +9,7 @@ export default class HomePage extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter>
+                {/* <BrowserRouter> */}
                     <Switch>
                         <Route path="/SocialMediaFrontEnd-Beta/home">
                             <NavBar />
@@ -19,7 +19,7 @@ export default class HomePage extends Component {
                             <LoginPage/>
                         </Route>
                     </Switch>
-                </BrowserRouter>
+                {/* </BrowserRouter> */}
             </div>
 
         )
