@@ -19,12 +19,15 @@ export default class SignUp extends Component {
         {/* Buttons Section */}
         <div className="sign-options">
           <button
+          onClick={this.props.changerZero}
             class="button"
             id="sign-in-button"
           >
             Sign In
           </button>
           <button
+            onClick={this.props.changerOne}
+
             class="button active-option"
             id="sign-up-button"
           >

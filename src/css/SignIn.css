@@ -110,6 +110,8 @@
     border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
 }
 #go-feed-login:hover{
     background-color: #fff;
