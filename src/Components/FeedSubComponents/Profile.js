@@ -12,7 +12,7 @@ export default function Profile() {
       {/* Profile photo and follow numbers */}
       <div class="profile-details-wrapper">
         <div class="pp-section">
-          <img src={pp} alt="Profile Image" id="pp" />
+          <img src={pp} alt="Profile Image" id="pp" alt="Profile İmage"/>
         </div>
         <div class="user-datas-section">
           <h1 id="user-name">Emre Akın</h1>

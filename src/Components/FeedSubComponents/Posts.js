@@ -42,6 +42,9 @@ export default class Posts extends Component {
   }
 
   componentDidMount = () => {
+
+    //BU KISIM SPRING BOOT İLE YAZDIĞIMIZ BACK-END İLE ÇALIŞTIĞI İÇİN DEVRE DIŞI BIRAKILDI
+
     /* Getting post datas from api */
     // let data;
     // axios

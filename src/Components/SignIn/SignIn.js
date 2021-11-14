@@ -4,7 +4,7 @@ import "../../css/SignIn.css";
 export default class SignIn extends Component {
 
   logInButtonFunc = () => {
-    window.location = "/home"
+    window.location = "/SocialMediaFrontEnd-Beta/home"
   }
 
   render() {
@@ -64,9 +64,9 @@ export default class SignIn extends Component {
             {/* <p id="content-hr">lorem</p> */}
         </div>
 
-        <div class="more-login-options-wrapper">
+        {/* <div class="more-login-options-wrapper">
             <h1 id="text-more-option">You can also login with:</h1>
-        </div>
+        </div> */}
 
         {/*
                     

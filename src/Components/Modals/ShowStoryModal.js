@@ -86,7 +86,7 @@ export default class ShowStoryModal extends Component {
                 <i class="fas fa-times-circle"></i>
                 </button>
               </div>
-              <img src={this.state.imgUrl} id="story-image" />
+              <img src={this.state.imgUrl} id="story-image" alt="Story İmage"/>
             </div>
             <div className="btn-next">
               <button onClick={this.nextButtonFunc} id="previus" className="story-show-btn">
