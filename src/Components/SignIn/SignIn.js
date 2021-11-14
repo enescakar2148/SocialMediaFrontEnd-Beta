@@ -1,11 +1,9 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../../css/SignIn.css";
 
 export default class SignIn extends Component {
 
-  logInButtonFunc = () => {
-    window.location = "/SocialMediaFrontEnd-Beta/home"
-  }
 
   render() {
     return (
@@ -59,7 +57,7 @@ export default class SignIn extends Component {
         <div className="more-options">
             <p id="forgot-pass-text">Forgot Password?</p>
         </div>
-        <button id="go-feed-login" onClick={this.logInButtonFunc}>LOG IN</button>
+        <Link id="go-feed-login" to="/SocialMediaFrontEnd-Beta/home">LOG IN</Link>
         <div className="hr">
             {/* <p id="content-hr">lorem</p> */}
         </div>
